@@ -1,0 +1,12 @@
+{
+	"name": "Geckod",
+	"version": "0.0.1",
+	"description": "A sample nodejs app for Bluemix",
+	"dependencies": {
+		"express": "*",
+        "sqlite3": "*",
+		"compression": "*",
+        "memory-cache": "*"
+	},
+	"repository": {}
+}

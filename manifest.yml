@@ -1,0 +1,13 @@
+---
+applications:
+- name: geckod
+  host: geckod
+  domain: eu-gb.mybluemix.net
+  path: .
+
+  memory: 80M
+  instances: 1
+  disk_quota: 200M
+
+  command: node app.js
+  timeout: 180

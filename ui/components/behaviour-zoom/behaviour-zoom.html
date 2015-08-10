@@ -1,0 +1,114 @@
+<link rel = "import" href = "/bower_components/polymer/polymer.html" />
+
+
+<script>
+    Polymer({
+
+        is: "behaviour-zoom",
+
+        properties: {link: String, zoomInClass: String, zoomed: {type: Boolean, value: false}},
+
+        ready: function()
+        {
+            window.addEventListener("urlchange", this._toggleZoom.bind(this), false)
+        },
+
+        _toggleZoom: function(event)
+        {
+            if (event.detail === this.link && this.zoomed === false)
+                this._zoomIn()
+            else if (event.detail !== this.link && this.zoomed === true)
+                this._zoomOut()
+        },
+
+        _zoomOut: function()
+        {
+            var target = this.parentNode
+            this._restoreMetricsToStyle(target)
+
+            // When ready
+            target.classList.remove(this.zoomInClass)
+
+            var instance = this
+            target.addEventListener(this._transitionEndEventName(), function(e)
+            {
+                if (e.srcElement == target)
+                {
+                    target.removeEventListener(e.type, arguments.callee, false)
+                    instance._clearMetricsFromStyle(target)
+                }
+            }, false)
+
+            instance.zoomed = false
+            target.dispatchEvent(new Event('zoomedout', {'bubbles': true}))
+        },
+
+        _zoomIn: function()
+        {
+            var target = this.parentNode
+
+            target.style.transition = '0s'
+
+            this._saveMetricsFromClass(target)
+            this._restoreMetricsToStyle(target)
+
+            target.style.transition = ''
+            target.classList.add(this.zoomInClass)
+            window.getComputedStyle(target).width
+
+            this._clearMetricsFromStyle(target)
+
+            // Setup work
+            this.zoomed = true
+            target.dispatchEvent(new Event('zoomedin', {bubbles:true}))
+        },
+
+        _saveMetricsFromClass: function(target)
+        {
+            this.saved = {}
+            this.saved.width = target.offsetWidth + 'px'
+            this.saved.height = target.offsetHeight + 'px'
+            this.saved.left =  target.offsetLeft + 'px'
+            this.saved.top = target.offsetTop + 'px'
+        },
+
+        _restoreMetricsToStyle: function(target)
+        {
+            target.style.width = this.saved.width
+            target.style.height = this.saved.height
+            target.style.left = this.saved.left
+            target.style.top = this.saved.top
+            target.style.position = 'absolute'
+            window.getComputedStyle(target).width
+        },
+
+        _clearMetricsFromStyle: function(target)
+        {
+            target.style.width = ''
+            target.style.height = ''
+            target.style.left = ''
+            target.style.top = ''
+            target.style.position = ''
+        },
+
+        _transitionEndEventName: function()
+        {
+            var i,
+            undefined,
+            el = document.createElement('div'),
+            transitions =
+            {
+                'transition':'transitionend',
+                'OTransition':'otransitionend',  // oTransitionEnd in very old Opera
+                'MozTransition':'transitionend',
+                'WebkitTransition':'webkitTransitionEnd'
+            };
+
+            for (i in transitions)
+                if (transitions.hasOwnProperty(i) && el.style[i] !== undefined)
+                    return transitions[i]
+
+            //TODO: throw 'TransitionEnd event is not supported in this browser';
+        }
+    })
+ </script>

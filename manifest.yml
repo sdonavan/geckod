@@ -1,11 +1,11 @@
 ---
 applications:
-- name: geckod
-  host: geckod
+- name: geckodtest
+  host: geckodtest
   domain: eu-gb.mybluemix.net
   path: .
 
-  memory: 80M
+  memory: 120M
   instances: 1
   disk_quota: 200M
 

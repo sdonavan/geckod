@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title> Geckod: Design &#38; Technology </title>
+        <link rel = "import" href = "/components/global-styles/global-styles.html" />
+        <link rel = "import" href = "/components/effect-autotype/effect-autotype.html" />
+        <link rel = "import" href = "/components/behaviour-history-api/behaviour-history-api.html" />
+
+        <link rel = "import" href = "/components/application-background/application-background.html" />
+        <link rel = "import" href = "/components/application-gallery/application-gallery.html" />
+
+        <meta name="google-site-verification" content="7vVmXKkcl7e5t2POprZsVUWMuEOvCvwos_UDuJ98PMk" />
+    </head>
+
+    <body>
+
+        <behaviour-history-api></behaviour-history-api>
+
+        <application-background></application-background>
+
+        <section id = "home">
+            <h1>
+
+                <a href = "/articles/">
+                    <span>Take me to the Gallery</span>
+                </a>
+
+                <behaviour-motion factor = '1.8' home = "/"></behaviour-motion>
+                <span>Hey, I'm Slavin</span>
+                <span>I create Web Solutions</span>
+                <span>I live in Heidelberg, Germany</span>
+                <span>I love
+                    <effect-autotype>
+                        <span>Motion Graphics</span>
+                        <span>Material Design</span>
+                        <span>Functional Programming</span>
+                        <span>Parallel Computing</span>
+                    </effect-autotype>
+                </span>
+            </h1>
+        </section>
+
+        <application-gallery>
+
+            {{#articles}}
+                <tile-article active = "true" test = "b">
+                    <h2>{{ title }}</h2>
+                    <time>{{ date }}</time>
+                    <tags>
+                        {{#tags}}
+                        <span>{{.}}</span>
+                        {{/tags}}
+                    </tags>
+                    <content>
+                    </content>
+                </tile-article>
+            {{/articles}}
+
+        </application-gallery>
+
+
+    </body>
+
+</html>

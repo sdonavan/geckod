@@ -3,15 +3,15 @@
 
 /* ============= Base serup ============= */
 
-var express    = require('express')
-var app        = express()
-var sqlite3    = require('sqlite3').verbose()
-var db         = new sqlite3.Database('main.db')
-var cache      = require('memory-cache');
-var compress   = require('compression')
+var express         = require('express')
+var cache           = require('memory-cache');
+var compress        = require('compression')
+var mustacheExpress = require('mustache-express');
 
-
-
+var app             = express()
+app.engine('mustache', mustacheExpress())
+app.set('view engine', 'mustache')
+app.set('views', __dirname + '/ui/')
 
 
 /* ============= Redirect www to canonial version ========= */
@@ -41,7 +41,18 @@ var MemoryCache = function(req, res, next)
 }
 
 
-/* ============= Rest API ============= */
+/* ============= Snapshot Router ============= */
+<!--
+var SnapshotRouter = express.Router()
+SnapshotRouter.get('/',function (req, res)
+{
+    res.render('article', {})
+})
+
+
+
+
+/* ============= Rest Router ============= */
 var APIRouter = express.Router()
 
 APIRouter.get('/',function (req, res)
@@ -73,17 +84,45 @@ APIRouter.get('/work/',function (req, res)
 })
 
 
+var dummyArticles =
+[
+    {'title': 'test1', 'date': '02-03-2012', tags: ['Teea', 'dawwz']}
+]
+
+/* ============= Static Router ================ */
+var StaticRouter = express.Router()
+StaticRouter.get('/', function(req, res)
+{
+    res.render( 'index', {articles: dummyArticles, test: [3, 4, 5, 6]})
+})
+
+StaticRouter.get('/articles/*', function(req, res)
+{
+    res.render( 'index', {articles: dummyArticles})
+})
+
+StaticRouter.get('/articles/', function(req, res)
+{
+    res.render( 'index', {articles: dummyArticles})
+})
+
+
+
+/* ============= Error Router ================ */
+
+
+
 /* ============= Set Response Queue ============== */
 
-app.use('', RedirectRouter)      // Redirect www to canonial
-app.use(compress({level: 9}))    // Use Gzip compression
-app.use(setHeaders)              // Set response headers
-app.use(MemoryCache)             // Try to retrieve a response from memory
-app.use(express.static('gui'))   // Try to find a static site
-app.use('/api/', APIRouter)      // Try to find a Rest response
+app.use('', RedirectRouter)          // Redirect www to canonial
+app.use(compress({level: 9}))        // Use Gzip compression
+app.use(setHeaders)                  // Set response headers
+app.use(MemoryCache)                 // Try to retrieve a response from memory
 
-
-
+app.use('/ajax/', APIRouter)          // Try to find a Rest response
+app.use('/snapshot/', SnapshotRouter) // Serve a static snapshot
+app.use('/', StaticRouter)         // Try to find a static site
+app.use(express.static('ui'))
 
 
 /* ============= Initialize ============= */

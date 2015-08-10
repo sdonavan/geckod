@@ -1,0 +1,55 @@
+<link rel = "import" href = "/bower_components/polymer/polymer.html" />
+
+
+<script>
+(function()
+{
+    /**
+    * History API Hack,
+    * Untill they implement history API Events
+    **/
+
+    Polymer({
+
+        is: "behaviour-history-api",
+
+        ready: function()
+        {
+            var link = this.parentNode
+
+            window.addEventListener('load', function()
+            {
+                window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
+            })
+
+            this.parentNode.addEventListener('click', function(e)
+            {
+                e.path.some(function(element)
+                {
+                    if (element.tagName === 'A')
+                    {
+                        e.preventDefault()
+
+                        // Get human friendly link if it's there
+                        var refference =
+                            (element.getAttribute('human-link') !== null)
+                            ? element.getAttribute('human-link')
+                            : element.getAttribute('href')
+
+                        history.pushState('', '', refference)
+                        window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
+                    }
+
+                })
+            })
+
+            window.onpopstate = function(e)
+            {
+                window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
+            }
+        },
+    })
+
+
+})()
+ </script>

@@ -1,0 +1,84 @@
+<link rel = "import" href = "/bower_components/polymer/polymer.html" />
+<link rel = "import" href = "/components/behaviour-motion/behaviour-motion.html" />
+<link rel = "import" href = "/components/service-api/service-api.html" />
+<link rel = "import" href = "/components/tile-article/tile-article.html" />
+
+<dom-module id = "application-gallery">
+
+    <template>
+
+        <service-api></service-api>
+
+        <behaviour-motion factor = "-1.6" home = "/articles/" inactive-class = "inactive-page"></behaviour-motion>
+
+        <content></content>
+        
+    </template>
+
+    <style>
+        :host
+        {
+            position: static;
+            width: 100vw;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            @apply(--app-transition);
+        }
+
+        :host.inactive-page
+        {
+            height: 100vh;
+            overflow-y: hidden;
+        }
+    </style>
+
+</dom-module>
+
+<script>
+    Polymer({
+
+        is: "application-gallery",
+
+        ready: function()
+        {
+
+            //
+            this.addEventListener('zoomedin', function(e)
+            {
+                // Remove scrollbar
+                this.classList.add('inactive-page')
+                var target = e.target
+            }.bind(this))
+
+
+            this.addEventListener('zoomedout', function()
+            {
+                this.classList.remove('inactive-page')
+            }.bind(this))
+        },
+
+        _createItems: function()
+        {
+            var api = this.querySelector('service-api')
+            var items = api.retrieveAllItems()
+
+            /*
+            return items.map(function(data)
+            {
+                var domElement = document.createElement(data['type'])
+
+                if (data['type'])
+                // Add the data to the element
+                Object.keys(data).forEach(function(key)
+                {
+                    domElement[key] = data[key]
+                })
+
+                return domElement
+            })*/
+        }
+    })
+ </script>

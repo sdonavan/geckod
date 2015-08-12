@@ -1,7 +1,10 @@
 <link rel = "import" href = "/bower_components/polymer/polymer.html" />
 <link rel = "import" href = "/components/behaviour-motion/behaviour-motion.html" />
 <link rel = "import" href = "/components/service-api/service-api.html" />
+<link rel = "import" href = "/components/global-styles/global-styles.html" />
+
 <link rel = "import" href = "/components/tile-article/tile-article.html" />
+<link rel = "import" href = "/components/tile-link/tile-link.html" />
 
 <dom-module id = "application-gallery">
 
@@ -12,13 +15,14 @@
         <behaviour-motion factor = "-1.6" home = "/articles/" inactive-class = "inactive-page"></behaviour-motion>
 
         <content></content>
-        
+
     </template>
 
     <style>
         :host
         {
-            position: static;
+            position: absolute;
+            z-index: 2;
             width: 100vw;
 
             display: flex;
@@ -36,6 +40,93 @@
     </style>
 
 </dom-module>
+
+<style is = "custom-style">
+
+    tile-article
+    {
+        width: 50%;
+        height: 300px;
+        display: inline-block;
+    }
+
+    tile-link
+    {
+        width: 25%;
+        height: 300px;
+        display: inline-block;
+        background-color: blue;
+    }
+
+    tile-article
+    {
+        --tile-article-content:
+        {
+            @apply(--app-transition-fast);
+        }
+
+        --tile-article-header:
+        {
+            @apply(--app-transition-fast);
+        }
+
+        --tile-article-particles:
+        {
+            @apply(--app-transition-delay);
+        }
+    }
+
+    tile-article img
+    {
+        @apply(--app-transition);
+    }
+
+    tile-link tags span,
+    tile-article tags span
+    {
+        padding: 5px;
+        font-size: 0.9rem;
+        margin: 4px;
+        color: white;
+        background-color: var(--app-palette-accent);
+        @apply(--app-transition-fast);
+    }
+
+    tile-article h2,
+    tile-link h2
+    {
+        padding: 10px;
+        font-size: var(--font-size-big-3);
+    }
+
+    tile-article time,
+    tile-link time
+    {
+        border-top: 1px solid var(--app-palette-accent);
+    }
+
+
+    tile-link h2,
+    tile-link description
+    {
+        @apply(--app-transition-fast);
+        padding: 10px;
+    }
+
+    tile-link
+    {
+        --tile-link-background:
+        {
+            background-color: var(--app-palette-dark);
+            @apply(--app-transition-fast);
+        }
+
+        --tile-link-content:
+        {
+            @apply(--app-transition-fast);
+        }
+    }
+</style>
 
 <script>
     Polymer({
@@ -64,21 +155,6 @@
         {
             var api = this.querySelector('service-api')
             var items = api.retrieveAllItems()
-
-            /*
-            return items.map(function(data)
-            {
-                var domElement = document.createElement(data['type'])
-
-                if (data['type'])
-                // Add the data to the element
-                Object.keys(data).forEach(function(key)
-                {
-                    domElement[key] = data[key]
-                })
-
-                return domElement
-            })*/
         }
     })
  </script>

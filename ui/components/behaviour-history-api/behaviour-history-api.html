@@ -31,10 +31,11 @@
                         e.preventDefault()
 
                         // Get human friendly link if it's there
-                        var refference =
-                            (element.getAttribute('human-link') !== null)
-                            ? element.getAttribute('human-link')
-                            : element.getAttribute('href')
+                        var refference = element.getAttribute('href')
+
+                        // If already on this page, scip
+                        if (window.location.pathname === refference)
+                            return
 
                         history.pushState('', '', refference)
                         window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))

@@ -1,6 +1,4 @@
 <link rel = "import" href = "/bower_components/polymer/polymer.html" />
-<link rel = "import" href = "/components/global-styles/global-styles.html" />
-
 <link rel = "import" href = "/components/behaviour-zoom/behaviour-zoom.html" />
 <link rel = "import" href = "/components/behaviour-parallax/behaviour-parallax.html" />
 <link rel = "import" href = "/components/effect-particle-system/effect-particle-system.html" />
@@ -9,7 +7,7 @@
 
     <template>
 
-        <a href = "{{snapshotLink}}" human-link$="{{realLink}}" class = "container">
+        <a href = "{{realLink}}" class = "container">
 
             <behaviour-zoom link = "{{realLink}}" zoom-in-class = 'fullscreen'></behaviour-zoom>
 
@@ -26,7 +24,8 @@
                     <content select = "time"></content>
                 </div>
 
-                <img src = "/media/images/cofee-beans.jpg" /><behaviour-parallax bind-to = "sibling" distance = '0.8'></behaviour-parallax>
+
+                <content select="img"></content><behaviour-parallax bind-to = "sibling" distance = '0.8'></behaviour-parallax>
 
                 <effect-particle-system
                     mode = "disabled"
@@ -57,15 +56,14 @@
 
     <style>
 
-        :host .container
+        .container
         {
             width: 100%;
             height: 100%;
             color: inherit;
-            text-decoration: inherit;
             display: block;
-
-            @apply(--app-transition-fast);
+            text-decoration: inherit;
+            @apply(--tile-article-content);
         }
 
         :host .container.fullscreen
@@ -85,7 +83,7 @@
             cursor: pointer;
             position: relative;
             overflow-y: hidden;
-            @apply(--app-transition-fast);
+            @apply(--tile-article-header);
         }
 
         .container.fullscreen header
@@ -93,7 +91,7 @@
             height: 50vh;
         }
 
-        .container header img
+        .container header ::content img
         {
             width: 100%;
             position: absolute;
@@ -101,14 +99,13 @@
             top: 0;
         }
 
-        .container:not(.fullscreen) header img
+        .container:not(.fullscreen) header ::content img
         {
             opacity: 0.1;
-            @apply(--app-transition);
         }
 
-        .container header:hover img,
-        .container.fullscreen header img
+        .container header:hover ::content img,
+        .container.fullscreen header ::content img
         {
             opacity: 0.3;
         }
@@ -123,7 +120,7 @@
             z-index: 2;
             top: 0;
             left: 0;
-            @apply(--app-transition-delay);
+            @apply(--tile-article-particles);
         }
 
         .container.fullscreen header effect-particle-system
@@ -136,8 +133,7 @@
         {
             width: 100%;
             height: 100%;
-            padding-left: 14%;
-            padding-right: 14%;
+            padding: 10% 14%;
             box-sizing: border-box;
             display: flex;
             position: relative;
@@ -150,31 +146,20 @@
 
         .container header .metadata ::content tags span
         {
-            color: red;
             padding: 5px;
             font-size: 0.9rem;
             margin: 4px;
             color: white;
-            background-color: var(--app-palette-accent);
-        }
-
-        .container header .metadata ::content h2
-        {
-            margin-top: 10px;
-            @apply(--app-transition-fast);
-            font-size: var(--font-size-big-3);
         }
 
         .container.fullscreen header .metadata h2
         {
 
             width: auto;
-            font-size: var(--font-size-big-1);
         }
 
         .container header .metadata ::content time
         {
-            border-top: 1px solid var(--app-palette-accent);
             padding: 14px;
             margin: 14px;
             margin-bottom: -14px;
@@ -202,22 +187,11 @@
     </style>
 </dom-module>
 
-<style is = "custom-style">
-    tile-article
-    {
-        width: 50%;
-        height: 300px;
-        display: inline-block;
-    }
-</style>
-
 
 <script>
     Polymer({
 
         is: "tile-article",
-
-        properties: {active: {type: Boolean, value: false}},
 
         attached: function()
         {
@@ -225,8 +199,7 @@
             // so that the particles can resize properly
             var title = this.querySelector('#main-header h2').innerHTML
 
-            this.realLink = '/articles/' + this._stringToHash(title)
-            this.snapshotLink = '/snapshots/' + this._stringToHash(title)
+            this.realLink = '/article/' + this._stringToHash(title)
 
             this.addEventListener('zoomedin', function(e)
             {

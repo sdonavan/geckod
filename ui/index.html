@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <title> Geckod: Design &#38; Technology </title>
+        <link rel = "import" href = "/components/behaviour-history-api/behaviour-history-api.html" />
+
+        <link rel = "import" href = "/components/application-background/application-background.html" />
+        <link rel = "import" href = "/components/application-gallery/application-gallery.html" />
+        <link rel = "import" href = "/components/application-home/application-home.html" />
+
+        <meta name="google-site-verification" content="7vVmXKkcl7e5t2POprZsVUWMuEOvCvwos_UDuJ98PMk" />
+    </head>
+
+    <body>
+
+        <behaviour-history-api></behaviour-history-api>
+
+        <application-background></application-background>
+
+        <application-home></application-home>
+
+        <application-gallery>
+
+                <tile-article>
+                    <h2>This is an article</h2>
+                    <time>Today</time>
+                    <img src = "http://www.pazzles.net/wordpress/wp-content/uploads/Stained-Glass-Gliding-Green-Buttefly.jpg" />
+                </tile-article>
+
+            {% for article in articles %}
+                <tile-article active = "true" test = "b">
+                    <h2>{{ article.title }}</h2>
+                    <time>{{ article.date }}</time>
+                    <tags>
+                        {% for tag in article.tags %}
+                            <span>{{tag}}</span>
+                        {% endfor %}
+                    </tags>
+                    <img src = "http://www.last-video.com/wp-content/uploads/2013/11/superbe-image-de-poissons-sous-l-eau.jpg" />
+                    <content>
+                    </content>
+                </tile-article>
+            {% endfor %}
+
+            <tile-link>
+                <img src = "https://www.wonderplugin.com/wp-content/plugins/wonderplugin-lightbox/images/demo-image0.jpg" />
+                <h2>
+                    This is a test titleds
+                </h2>
+                <description>
+                    This is a really small description.
+                </description>
+                <tags>
+                    <span>Tag1</span>
+                    <span>Tag2></span>
+                </tags>
+            </tile-link>
+
+
+            <tile-link>
+                dawdaw
+            </tile-link>
+
+            <tile-article active = "true" test = "b">
+                <h2>{{ article.title }}</h2>
+                <time>{{ article.date }}</time>
+                <tags>
+                    {% for tag in article.tags %}
+                        <span>{{tag}}</span>
+                    {% endfor %}
+                </tags>
+                <content>
+                </content>
+            </tile-article>
+
+            <tile-article active = "true" test = "b">
+                <h2>{{ article.title }}</h2>
+                <time>{{ article.date }}</time>
+                <tags>
+                    {% for tag in article.tags %}
+                        <span>{{tag}}</span>
+                    {% endfor %}
+                </tags>
+                <content>
+                </content>
+            </tile-article>
+
+            <tile-article active = "true" test = "b">
+                <h2>{{ article.title }}</h2>
+                <time>{{ article.date }}</time>
+                <tags>
+                    {% for tag in article.tags %}
+                        <span>{{tag}}</span>
+                    {% endfor %}
+                </tags>
+                <content>
+                </content>
+            </tile-article>
+        </application-gallery>
+
+
+    </body>
+
+</html>

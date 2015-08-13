@@ -15,6 +15,7 @@
             width: 100%;
             height: 100%;
             display: flex;
+            flex-flow: column;
             align-items: center;
             justify-content: center;
         }
@@ -31,7 +32,7 @@
             display: block;
             padding-left: 10px;
             padding-right: 10px;
-            transition: all 0.4s;
+            transition: @apply(--app-transition-fast);
             cursor: pointer;
         }
 
@@ -56,6 +57,32 @@
             color: var(--app-palette-accent);
         }
 
+        a
+        {
+            @apply(--app-transition);
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+            background-color: rgba(48, 48, 114, 0.2);
+            color: var(--app-palette-accent);
+            border-radius: 50%;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+
+            margin-top: 40px;
+            margin-bottom: -120px;
+        }
+
+        a:hover
+        {
+            background-color: rgba(48, 48, 114, 1);
+        }
         /* ========== Add black background on squarer devices ========= */
         @media (min-aspect-ratio: 19/10)
         {
@@ -84,15 +111,10 @@
 
     <template>
         <h1>
-
-            <a href = "/articles/">
-                <span>Take me to the Gallery</span>
-            </a>
-
             <behaviour-motion factor = '1.8' home = "/"></behaviour-motion>
             <span>Hey, I'm Slavin</span>
             <span>I create Web Solutions</span>
-            <span>I live in Heidelberg, Germany</span>
+            <!--<span>I live in Heidelberg, Germany</span>-->
             <span>I love
                 <effect-autotype>
                     <span>Motion Graphics</span>
@@ -102,6 +124,11 @@
                 </effect-autotype>
             </span>
         </h1>
+
+        <a href = "/articles/">
+            <behaviour-motion factor = '1.2' home = "/"></behaviour-motion>
+            work <i class="fa fa-arrow-right"></i>
+        </a>
     </template>
 </dom-module>
 

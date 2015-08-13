@@ -4,7 +4,6 @@
 /* ============= Base serup ============= */
 
 var express         = require('express')
-var cache           = require('apicache').options({ debug: true }).middleware
 var compress        = require('compression')
 var swig            = require('swig')
 var moment          = require('moment') // For date parsing

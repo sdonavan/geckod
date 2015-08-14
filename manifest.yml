@@ -9,5 +9,5 @@ applications:
   instances: 1
   disk_quota: 200M
 
-  command: node server.js
+  command: node server/server.js
   timeout: 180

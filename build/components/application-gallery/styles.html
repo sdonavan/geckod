@@ -1,0 +1,102 @@
+<link rel = "import" href = "../../components/global-styles/global-styles.html" />
+
+<style is="custom-style">
+
+
+    application-gallery
+    {
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @apply(--app-transition);
+    }
+
+    application-gallery.inactive-page
+    {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+
+    tile-article
+    {
+        width: 50%;
+        height: 300px;
+        display: inline-block;
+
+        --tile-article-content:
+        {
+            @apply(--app-transition-fast);
+        };
+
+        --tile-article-header:
+        {
+            @apply(--app-transition-fast);
+        };
+
+        --tile-article-particles:
+        {
+            @apply(--app-transition-delay);
+        };
+    }
+
+    tile-article img
+    {
+        @apply(--app-transition);
+    }
+
+
+    tile-link tags span,
+    tile-article tags span
+    {
+        padding: 5px;
+        font-size: 0.9rem;
+        margin: 4px;
+        color: white;
+        background-color: var(--app-palette-accent);
+        @apply(--app-transition-fast);
+    }
+
+    tile-article h2,
+    tile-link h2
+    {
+        padding: 10px;
+        font-size: var(--font-size-big-3);
+    }
+
+    tile-article time,
+    tile-link time
+    {
+        border-top: 1px solid var(--app-palette-accent);
+    }
+
+
+    tile-link h2,
+    tile-link description
+    {
+        @apply(--app-transition-fast);
+        padding: 10px;
+    }
+
+    tile-link
+    {
+        width: 25%;
+        height: 300px;
+        display: inline-block;
+
+        --tile-link-background:
+        {
+            background-color: var(--app-palette-dark);
+            @apply(--app-transition-fast);
+        };
+
+        --tile-link-content:
+        {
+            @apply(--app-transition-fast);
+        };
+    }
+</style>

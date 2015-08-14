@@ -1,9 +1,9 @@
 var fs        = require('fs')
 var Datastore = require('nedb')
-var filePath  = __dirname + '/geckod.nedb'
+var config    = require('./config')
 
 
-var db = new Datastore({ filename: filePath })
+var db = new Datastore({ filename: config.database })
 db.loadDatabase()
 
 module.exports = {}

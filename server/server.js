@@ -15,15 +15,16 @@ app.set('view engine', 'html')
 app.set('views', config.staticFolder)
 
 
+var renderRouter = require('./stream/render-router')
+
+
 
 /* ============= Set Response Queue ============== */
 
-app.use(compress({level: 1}))                     // Use Gzip compression
+//app.use(compress({level: 1}))                     // Use Gzip compression
 app.use('', require('./stream/redirect-router'))  // Redirect www to canonial
+app.use('/', renderRouter)           // Try to find a static site
 
-//app.use(setHeaders)                  // Set response headers
-//app.use('/ajax/', APIRouter)         // Try to find a Rest
-app.use('/', require('./stream/render-router'))           // Try to find a static site
 app.use(express.static(config.staticFolder))
 app.use(express.static(config.staticFolder))
 

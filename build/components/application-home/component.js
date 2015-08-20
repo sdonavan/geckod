@@ -1,0 +1,1 @@
+Polymer({is:"application-home"});

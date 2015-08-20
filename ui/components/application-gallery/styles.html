@@ -1,5 +1,3 @@
-<link rel = "import" href = "../../components/global-styles/global-styles.html" />
-
 <style is="custom-style">
 
 
@@ -13,7 +11,7 @@
         flex-direction: row;
         flex-wrap: wrap;
 
-        @apply(--app-transition);
+        @apply(--app-transition-slow);
     }
 
     application-gallery.inactive-page
@@ -40,13 +38,13 @@
 
         --tile-article-particles:
         {
-            @apply(--app-transition-delay);
+            @apply(--app-transition-fast-delay);
         };
     }
 
     tile-article img
     {
-        @apply(--app-transition);
+        @apply(--app-transition-slow);
     }
 
 

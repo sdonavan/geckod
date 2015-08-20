@@ -1,18 +1,20 @@
-<dom-module id = "application-gallery">
+<link rel = "import" href = "../../components/behaviour-motion/behaviour-motion.html" />
+<link rel = "import" href = "../../components/service-api/service-api.html" />
+<link rel = "import" href = "../../components/tile-article/tile-article.html" />
+<link rel = "import" href = "../../components/tile-link/tile-link.html" />
 
-    <link rel = "import" href = "../../bower_components/polymer/polymer.html" />
-    <link rel = "import" href = "../../components/behaviour-motion/behaviour-motion.html" />
-    <link rel = "import" href = "../../components/service-api/service-api.html" />
-    <link rel = "import" href = "../../components/tile-article/tile-article.html" />
-    <link rel = "import" href = "../../components/tile-link/tile-link.html" />
+
+
+<dom-module id = "application-gallery">
 
     <link rel = "import" href = "styles.html" />
 
     <template>
         <service-api></service-api>
-        <behaviour-motion factor = "-1.6" home = "/articles/" inactive-class = "inactive-page"></behaviour-motion>
+        <behaviour-motion factor = "-1.6" link = "/articles/.*" inactive-class = "inactive-page"></behaviour-motion>
         <content></content>
     </template>
 
-    <script src = "functionality.js"></script>
+    <script src = "component.js"></script>
+
 </dom-module>

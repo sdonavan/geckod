@@ -1,16 +1,29 @@
 <!doctype html>
 
+
 <html>
 
     <head>
         <title> Geckod: Design &#38; Technology </title>
-        <link rel = "import" href = "components/behaviour-history-api/behaviour-history-api.html" />
 
-        <link rel = "import" href = "components/application-background/application-background.html" />
-        <link rel = "import" href = "components/application-gallery/application-gallery.html" />
-        <link rel = "import" href = "components/application-home/application-home.html" />
+        <link rel = "import" href = "/bower_components/polymer/polymer.html" />
+        <link rel = "import" href = "/components/global-styles/global-styles.html" />
+
+        <link rel = "import" href = "/components/behaviour-history-api/behaviour-history-api.html" />
+        <link rel = "import" href = "/components/application-background/application-background.html" />
+        <link rel = "import" href = "/components/application-gallery/application-gallery.html" />
+        <link rel = "import" href = "/components/application-home/application-home.html" />
+        <link rel = "import" href = "/components/application-menu/application-menu.html" />
 
         <meta name="google-site-verification" content="7vVmXKkcl7e5t2POprZsVUWMuEOvCvwos_UDuJ98PMk" />
+
+        <script>
+            //document.addEventListener('DOMContentLoaded', function()
+            //{
+            //   //window.dispatchEvent(new Event('resize'))
+            //})
+        </script>
+
     </head>
 
     <body>
@@ -64,6 +77,7 @@
             </tile-link>
         </application-gallery>
 
+        <application-menu></application-menu>
 
     </body>
 

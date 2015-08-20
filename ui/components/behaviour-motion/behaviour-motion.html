@@ -1,45 +1,9 @@
-<link rel = "import" href = "../../bower_components/polymer/polymer.html" />
+<link rel = "import" href = "../../components/behaviour-router/behaviour-router.html" />
 
 
-<script>
-(function()
-{
-
-    var moduleGlobals =
-    {
-        linksList: new Set()
-    }
-
-    Polymer({
-
-        is: "behaviour-motion",
-
-        properties: {factor: Number, home: String, inactiveClass: String},
-
-        ready: function()
-        {
-            // Register to the global list
-            moduleGlobals.linksList.add(this.home)
-            window.addEventListener("urlchange", this._toggle.bind(this), false)
-        },
-
-        _toggle: function(event)
-        {
-            if (event.detail === this.home)
-            {
-                this.parentNode.style.transform = ""
-                if (typeof this.inactiveClass !== 'undefined')
-                    this.parentNode.classList.remove(this.inactiveClass)
-            }
-            else if (event.detail !== this.home && moduleGlobals.linksList.has(event.detail))
-            {
-                this.parentNode.style.transform = 'translate(' + -screen.width * this.factor + 'px)'
-                if (typeof this.inactiveClass !== 'undefined')
-                    this.parentNode.classList.add(this.inactiveClass)
-            }
-        }
-    })
-
-
-})()
- </script>
+<dom-module id = "behaviour-motion">
+    <template>
+    	<behaviour-router page="{{link}}" active="on" inactive="off" />
+    </template>
+    <script src = "component.js"></script>
+</dom-module>

@@ -1,4 +1,3 @@
-<link rel = "import" href = "../../bower_components/polymer/polymer.html" />
 <link rel = "stylesheet" href = "reset.css" />
 
 <style id = "global" is = "custom-style">
@@ -27,24 +26,29 @@
         --app-palette-dark: #AD1457;
         --app-palette-accent: #7986CB;
 
-        --app-transition:
+        --app-transition-slow:
         {
             transition: all 1.2s cubic-bezier(.03,.57,.44,.95);
-        }
+        };
 
-        --app-transition-delay:
+        --app-transition-slow-delay:
+        {
+            transition: all 0.3s ease-in 1.2s;
+        };
+
+        --app-transition-fast-delay:
         {
             transition: all 0.3s ease-in 0.3s;
-        }
+        };
 
         --app-transition-fast:
         {
             transition: all 0.3s cubic-bezier(.03,.57,.44,.95);
-        }
+        };
     };
 
     body
     {
-        
+
     }
 </style>

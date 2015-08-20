@@ -1,0 +1,13 @@
+{
+  "name": "Geckod",
+  "version": "3.0.0",
+  "description": "A sample nodejs app for Bluemix",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-minify-polymer": "*",
+    "grunt-contrib-uglify": "*",
+    "vulcanize": "*"
+  },
+  "repository": {}
+}

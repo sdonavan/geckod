@@ -1,0 +1,4 @@
+Polymer({
+
+    is: "tile-link"
+})

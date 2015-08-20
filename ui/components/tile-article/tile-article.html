@@ -1,15 +1,16 @@
+<link rel = "import" href = "../../components/behaviour-zoom/behaviour-zoom.html" />
+<link rel = "import" href = "../../components/behaviour-parallax/behaviour-parallax.html" />
+<link rel = "import" href = "../../components/effect-particle-system/effect-particle-system.html" />
+
+
 <dom-module id = "tile-article">
 
-    <link rel = "import" href = "../../bower_components/polymer/polymer.html" />
-    <link rel = "import" href = "../../components/behaviour-zoom/behaviour-zoom.html" />
-    <link rel = "import" href = "../../components/behaviour-parallax/behaviour-parallax.html" />
-    <link rel = "import" href = "../../components/effect-particle-system/effect-particle-system.html" />
-
+    <link rel = "import" type = "css" href = "styles.css" />
 
     <template>
         <a href = "{{realLink}}" class = "container">
 
-            <behaviour-zoom link = "{{realLink}}" zoom-in-class = 'fullscreen'></behaviour-zoom>
+            <behaviour-zoom link$="{{realLink}}" zoom-in-class = 'fullscreen'></behaviour-zoom>
 
             <header id = "main-header">
                 <div class = "metadata">
@@ -20,72 +21,27 @@
                 </div>
                 <content select="img"></content><behaviour-parallax bind-to = "sibling" distance = '0.8'></behaviour-parallax>
                 <effect-particle-system
-                    mode = "disabled"
+                    link = "{{realLink}}"
                     class = "big" number = "30" size = "80" speed = "1.1" color = "#62549C" opacity = "0.1">
                 </effect-particle-system>
                 <effect-particle-system
-                    mode = "disabled"
+                    link = "{{realLink}}"
                     class = "big" number = "90" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
                 </effect-particle-system>
                 <effect-particle-system
-                    mode = "disabled"
+                    link = "{{realLink}}"
                     class = "small" number = "120" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
                 </effect-particle-system>
                 <effect-particle-system
-                    mode = "disabled"
+                    link = "{{realLink}}"
                     class = "small" number = "60" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
                 </effect-particle-system>
             </header>
 
             <section class = "article-body"></section>
-            
+
         </a>
     </template>
 
-    <link rel = "import" type = "css" href = "styles.css" />
-
+    <script src = "component.js"></script>
 </dom-module>
-
-
-<script>
-    Polymer({
-
-        is: "tile-article",
-
-        attached: function()
-        {
-            // On Zoom-In, trigger the resize event,
-            // so that the particles can resize properly
-            var title = this.querySelector('#main-header h2').innerHTML
-
-            this.realLink = '/article/' + this._stringToHash(title)
-
-            this.addEventListener('zoomedin', function(e)
-            {
-                ['behaviour-parallax', 'effect-particle-system'].forEach(function(component)
-                {
-                    for (var i = 0; i < this.querySelectorAll(component).length; i++)
-                        this.querySelectorAll(component)[i].on()
-                }.bind(this))
-            }.bind(this))
-
-            this.addEventListener('zoomedout', function(e)
-            {
-                ['behaviour-parallax', 'effect-particle-system'].forEach(function(component)
-                {
-                    for (var i = 0; i < this.querySelectorAll(component).length; i++)
-                        this.querySelectorAll(component)[i].off()
-                }.bind(this))
-            }.bind(this))
-        },
-
-        _stringToHash: function(Text)
-        {
-            return Text
-                .toLowerCase()
-                .replace(/ /g,'-')
-                .replace(/[^\w-]+/g,'')
-                ;
-        }
-    })
- </script>

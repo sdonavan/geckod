@@ -1,19 +1,23 @@
-Polymer({
+Polymer
+({
 
     is: "tile-article",
 
-    attached: function()
+    properties: {link: String},
+
+    ready: function()
     {
-        var title = this.querySelector('#main-header h2').innerHTML
-        this.realLink = '/articles/' + this._stringToHash(title)
+        this.realLink = '/articles/' + this.link
+        this.apiLink = '/api/article/' + this.link
     },
 
-    _stringToHash: function(Text)
+    loadBody: function(event)
     {
-        return Text
-            .toLowerCase()
-            .replace(/ /g,'-')
-            .replace(/[^\w-]+/g,'')
-            ;
+        var content = this.querySelector('main')
+
+        var response = this.querySelector('iron-ajax').lastResponse
+
+        if (response)
+            content.innerHTML = response[0].main
     }
 })

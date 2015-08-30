@@ -2,45 +2,71 @@
 <link rel = "import" href = "../../components/behaviour-parallax/behaviour-parallax.html" />
 <link rel = "import" href = "../../components/effect-particle-system/effect-particle-system.html" />
 
+<link href = 'http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'/>
+
+<script src = "../../bower_components/particles/particles.js"></script>
+<link rel = "import" href = "../../bower_components/iron-ajax/iron-ajax.html"/>
+
+
+<script src = '../../bower_components/prism/prism.js'></script>
+<link href = '../../bower_components/prism/themes/prism.css' rel='stylesheet' type='text/css'/>
+<link href = '../../bower_components/prism-themes/themes/prism-ghcolors.css' rel='stylesheet' type='text/css'/>
 
 <dom-module id = "tile-article">
 
     <link rel = "import" type = "css" href = "styles.css" />
+    <link rel = "import" type = "css" href = "styles-body.css" />
 
     <template>
-        <a href = "{{realLink}}" class = "container">
 
-            <behaviour-zoom link$="{{realLink}}" zoom-in-class = 'fullscreen'></behaviour-zoom>
+        <iron-ajax auto url = "{{apiLink}}" handle-as="json" on-response = "loadBody"> </iron-ajax>
 
-            <header id = "main-header">
-                <div class = "metadata">
-                    <behaviour-parallax distance = '0.6'></behaviour-parallax>
-                    <content select = "tags"></content>
-                    <content select = "h2"></content>
-                    <content select = "time"></content>
-                </div>
-                <content select="img"></content><behaviour-parallax bind-to = "sibling" distance = '0.8'></behaviour-parallax>
-                <effect-particle-system
-                    link = "{{realLink}}"
-                    class = "big" number = "30" size = "80" speed = "1.1" color = "#62549C" opacity = "0.1">
-                </effect-particle-system>
-                <effect-particle-system
-                    link = "{{realLink}}"
-                    class = "big" number = "90" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
-                </effect-particle-system>
-                <effect-particle-system
-                    link = "{{realLink}}"
-                    class = "small" number = "120" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
-                </effect-particle-system>
-                <effect-particle-system
-                    link = "{{realLink}}"
-                    class = "small" number = "60" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
-                </effect-particle-system>
-            </header>
+        <div class = "container">
 
-            <section class = "article-body"></section>
+            <behaviour-zoom zoom-in-class = 'fullscreen'>
+                <behaviour-router page="{{realLink}}" active="zoomIn" inactive="zoomOut" />
+            </behaviour-zoom>
 
-        </a>
+            <a href = "{{realLink}}">
+                <header id = "main-header">
+
+                    <div class = "metadata">
+
+                        <behaviour-parallax distance = '0.6' scroller = ".container">
+                            <behaviour-router page="{{realLink}}" active="on" inactive="off" />
+                        </behaviour-parallax>
+
+                        <content select = "tags"></content>
+                        <content select = "h2"></content>
+                        <content select = "time"></content>
+                    </div>
+
+                    <content select="img"></content><behaviour-parallax scroller = ".container" bind-to = "sibling" distance = '0.8'>
+                        <behaviour-router page="{{realLink}}" active="on" inactive="off" />
+                    </behaviour-parallax>
+                    
+                    <effect-particle-system
+                        link = "{{realLink}}"
+                        class = "big" number = "30" size = "80" speed = "1.1" color = "#62549C" opacity = "0.1">
+                    </effect-particle-system>
+                    <effect-particle-system
+                        link = "{{realLink}}"
+                        class = "big" number = "90" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
+                    </effect-particle-system>
+                    <effect-particle-system
+                        link = "{{realLink}}"
+                        class = "small" number = "120" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
+                    </effect-particle-system>
+                    <effect-particle-system
+                        link = "{{realLink}}"
+                        class = "small" number = "60" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
+                    </effect-particle-system>
+                </header>
+            </a>
+
+            <content select = "main"></content>
+
+        </div>
     </template>
 
     <script src = "component.js"></script>

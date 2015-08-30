@@ -2,16 +2,15 @@ Polymer({
 
     is: "behaviour-router",
 
-    properties: 
+    properties:
     {
         page: String,
         active: String,
         inactive: String
     },
 
-    attached: function()
+    created: function()
     {
-        this._toggle({detail: window.location.pathname})
         window.addEventListener("urlchange", this._toggle.bind(this), false)
     },
 
@@ -19,16 +18,15 @@ Polymer({
     {
         var host = this.parentNode
 
-        if (this._isSubRoute(this.page, event.detail))
+        if (typeof this.active !== 'undefined' && this._isSubRoute(this.page, event.detail))
             host[this.active].call(host)
 
-        else 
+        else if (typeof this.inactive !== 'undefined')
             host[this.inactive].call(host)
     },
 
     _isSubRoute: function(childPath, parentPath)
     {
         return parentPath.match(new RegExp('^' + childPath + '$')) !== null
-        //(parentPath.substring(0, childPath.length) === childPath && childPath !=='/')
     }
 })

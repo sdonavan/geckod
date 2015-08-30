@@ -32,5 +32,10 @@ Polymer({
         {
             window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
         }
-    },
+
+        window.addEventListener("DOMContentLoaded", function(event) 
+        {
+            window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
+        })
+    }
 })

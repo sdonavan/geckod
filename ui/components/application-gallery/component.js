@@ -1,20 +1,14 @@
-Polymer({
-
+Polymer
+({
     is: "application-gallery",
 
-    ready: function()
+    addInactiveClass: function()
     {
-        this.addEventListener('zoomedin', function(e)
-        {
-            // Remove scrollbar
-            this.classList.add('inactive-page')
-        }.bind(this))
+        this.classList.add('inactive-page')
+    },
 
-
-        this.addEventListener('zoomedout', function()
-        {
-            // Add the scrollbar
-            this.classList.remove('inactive-page')
-        }.bind(this))
+    removeInactiveClass: function()
+    {
+        this.classList.remove('inactive-page')
     }
 })

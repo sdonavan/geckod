@@ -1,4 +1,1 @@
-Polymer({
-
-    is: "tile-link"
-})
+Polymer({is: "tile-link"})

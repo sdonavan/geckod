@@ -2,6 +2,9 @@
 {
     position: relative;
     overflow: hidden;
+    width: 25%;
+    height: 300px;
+    display: inline-block;
 }
 
 .image
@@ -26,7 +29,8 @@
     justify-content: center;
     flex-direction: column;
 
-    @apply(--tile-link-background);
+    background-color: var(--app-palette-dark);
+    @apply(--app-transition-fast);
 }
 
 :host:hover .background
@@ -51,7 +55,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    @apply(--tile-link-content);
+    @apply(--app-transition-fast);
 }
 
 :host:hover .background .icon
@@ -86,4 +90,11 @@
 {
     opacity: 1;
     transform: translate(0);
+}
+
+::content h2,
+::content description
+{
+    @apply(--app-transition-fast);
+    padding: 10px;
 }

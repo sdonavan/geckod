@@ -10,7 +10,7 @@
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
-  
+
   /* particles.js variables with default values */
   this.pJS = {
     canvas: {
@@ -1236,7 +1236,7 @@ var pJS = function(tag_id, params){
   pJS.fn.vendors.destroypJS = function(){
     cancelAnimationFrame(pJS.fn.drawAnimFrame);
     canvas_el.remove();
-    pJSDom = [];
+    //pJSDom = null;
   };
 
 
@@ -1514,9 +1514,9 @@ window.particlesJS = function(tag_id, params){
 
   /* launch particle.js */
   if(canvas != null){
-    var pjs = new pJS(tag_id, params);
-    pJSDom.push(pjs);
-    return pjs;
+     var pjs = new pJS(tag_id, params);
+     pJSDom.push(pjs);
+     return pjs;
   }
 
 };

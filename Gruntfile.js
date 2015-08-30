@@ -4,7 +4,7 @@ var path = require('path')
 
 
 
-module.exports = function(grunt) 
+module.exports = function(grunt)
 {
     // Project configuration.
     grunt.initConfig(
@@ -22,11 +22,11 @@ module.exports = function(grunt)
             }
         },
 
-        uglify: 
+        uglify:
         {
-            default: 
+            default:
             {
-                files: 
+                files:
                 [{
                     expand: true,
                     cwd: 'ui',
@@ -64,8 +64,8 @@ module.exports = function(grunt)
             }
         }
     })
-    
-    grunt.task.registerTask('vulcanizerMain', 'A sample .', function(arg1, arg2) 
+
+    grunt.task.registerTask('vulcanizerMain', 'A sample .', function(arg1, arg2)
     {
             var done = this.async()
 
@@ -93,16 +93,16 @@ module.exports = function(grunt)
             })
     })
 
-    grunt.task.registerTask('vulcanizer', 'A sample task that logs stuff.', function(arg1, arg2) 
+    grunt.task.registerTask('vulcanizer', 'A sample task that logs stuff.', function(arg1, arg2)
     {
         var done = this.async()
 
-        function getDirectories(srcpath) 
+        function getDirectories(srcpath)
         {
           return fs.readdirSync(srcpath).filter(function(file) {
             return fs.statSync(path.join(srcpath, file)).isDirectory();
           })
-        }   
+        }
 
 
         var components = getDirectories(__dirname + '/build/components/')
@@ -134,7 +134,6 @@ module.exports = function(grunt)
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-minify-polymer')
-    grunt.loadNpmTasks('grunt-vulcanize')
     grunt.loadNpmTasks('grunt-contrib-uglify')
 
     // Default task(s).

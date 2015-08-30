@@ -1,34 +1,46 @@
+:host
+{
+    width: 50%;
+    height: 300px;
+    display: inline-block;
+}
+
 .container
 {
 
     width: 100%;
     height: 100%;
-    color: inherit;
     display: block;
-    text-decoration: inherit;
-    @apply(--tile-article-content);
 
-    color: var(--test-var);
+    @apply(--app-transition-fast);
 }
 
-:host .container.fullscreen
+.container.fullscreen
 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container > a
+{
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .container header
 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg,#283593 0,#673a5d 100%);
+    background: linear-gradient(135deg,var(--app-palette-dark) 0, var(--app-palette-medium) 100%);
     cursor: pointer;
     position: relative;
     overflow-y: hidden;
-    @apply(--tile-article-header);
+
+    @apply(--app-transition-fast);
 }
 
 .container.fullscreen header
@@ -42,6 +54,11 @@
     position: absolute;
     z-index: 0;
     top: 0;
+}
+
+.container:not(.fullscreen) header ::content img
+{
+    @apply(--app-transition-slow);
 }
 
 .container:not(.fullscreen) header ::content img
@@ -65,7 +82,8 @@
     z-index: 2;
     top: 0;
     left: 0;
-    @apply(--tile-article-particles);
+
+    @apply(--app-transition-fast-delay);
 }
 
 .container.fullscreen header effect-particle-system
@@ -89,14 +107,6 @@
     justify-content: center;
 }
 
-.container header .metadata ::content tags span
-{
-    padding: 5px;
-    font-size: 0.9rem;
-    margin: 4px;
-    color: white;
-}
-
 .container.fullscreen header .metadata h2
 {
 
@@ -109,23 +119,6 @@
     margin: 14px;
     margin-bottom: -14px;
     text-align: center;
-}
-
-.container .article-body
-{
-    opacity: 0;
-    display: none;
-    background-color: white;
-    color: black;
-    min-height: 50vh;
-}
-
-.container.fullscreen .article-body
-{
-    padding-top: 80px;
-    padding-left: 20%;
-    padding-right: 20%;
-    display: block;
-    opacity: 1;
-
+    font-size: 0.9rem;
+    border-top: 1px solid var(--app-palette-accent);
 }

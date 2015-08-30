@@ -44,8 +44,9 @@
     @apply(--app-transition-slow);
 }
 
-:host span.home
+:host span.colored
 {
+    @apply(--app-transition-fast);
     background-color: var(--app-palette-accent);
 }
 
@@ -75,7 +76,7 @@
     height: 0;
     left: 0;
     top: 0;
-    @apply(--app-transition-slow-delay);
+    @apply(--app-transition-slow);
 }
 
 .gallery .icon,
@@ -126,4 +127,11 @@
     border-top-width:10px;
     border-bottom:0;
     color: white;
+}
+
+.colored .icon,
+.colored .icon:after,
+.colored .icon:before
+{
+    @apply(--app-transition-fast);
 }

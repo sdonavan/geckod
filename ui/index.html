@@ -17,13 +17,6 @@
 
         <meta name="google-site-verification" content="7vVmXKkcl7e5t2POprZsVUWMuEOvCvwos_UDuJ98PMk" />
 
-        <script>
-            //document.addEventListener('DOMContentLoaded', function()
-            //{
-            //   //window.dispatchEvent(new Event('resize'))
-            //})
-        </script>
-
     </head>
 
     <body>
@@ -36,14 +29,8 @@
 
         <application-gallery>
 
-                <tile-article>
-                    <h2>This is an article</h2>
-                    <time>Today</time>
-                    <img src = "http://www.pazzles.net/wordpress/wp-content/uploads/Stained-Glass-Gliding-Green-Buttefly.jpg" />
-                </tile-article>
-
             {s% for article in articles %s}
-                <tile-article active = "true" test = "b">
+                <tile-article link = "{s{ article._id }s}">
                     <h2>{s{ article.title }s}</h2>
                     <time>{s{ article.date }s}</time>
                     <tags>
@@ -52,8 +39,8 @@
                         {s% endfor %s}
                     </tags>
                     <img src = "http://www.last-video.com/wp-content/uploads/2013/11/superbe-image-de-poissons-sous-l-eau.jpg" />
-                    <content>
-                    </content>
+                    
+                    <main></main>
                 </tile-article>
             {s% endfor %s}
 

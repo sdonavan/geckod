@@ -1,0 +1,42 @@
+:host
+{
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @apply(--app-transition-slow);
+}
+
+:host.inactive-page
+{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+
+::content tags span
+{
+    padding: 5px;
+    font-size: 0.8rem;
+    margin: 4px;
+    color: white;
+    background-color: var(--app-palette-accent);
+    @apply(--app-transition-fast);
+}
+
+::content tile-article h2,
+::content tile-link h2
+{
+    padding: 10px;
+    font-size: var(--font-size-big-3);
+    @apply(--app-transition-fast);
+}
+
+::content tile-article .fullscreen h2
+{
+    font-size: var(--font-size-big-2);
+}

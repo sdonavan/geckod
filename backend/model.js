@@ -15,3 +15,11 @@ module.exports.getAllArticles = function(callback)
         callback(docs)
     })
 }
+
+module.exports.getArticle = function(id, callback)
+{
+    db.find({_id: id}, function(err, docs)
+    {
+        callback(docs)
+    })
+}

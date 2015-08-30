@@ -6,7 +6,7 @@ var cache           = require('memory-cache')
 
 
 var StaticRouter = express.Router()
-StaticRouter.get(['/', '/articles'], function(req, res)
+StaticRouter.get(['/', '/articles', '/articles/:id'], function(req, res)
 {
 	// Look in the cache 
 	var cachedVersion = cache.get(req.originalUrl)

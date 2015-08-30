@@ -4,8 +4,6 @@ Polymer({
 
     properties: 
     {
-        link: {type: String, value: ''}, 
-        test: String,
         zoomInClass: String, 
         zoomed: {type: Boolean, value: false}
     },

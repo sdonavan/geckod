@@ -6,15 +6,17 @@
 
     <template>
 
-        <behaviour-router page="/" active="on" inactive="off" />
+        <behaviour-router page="/" active="home"></behaviour-router>
+
+        <behaviour-router page="/articles/.*" active="article"></behaviour-router>
+        
+        <behaviour-router page="/articles/" active="gallery"></behaviour-router>
+
 
         <a href = "/articles/">
             <span>
                 <i class = "icon"></i>
             </span>
-            <!--
-            <i class="icon icon_home"></i>
-        -->
         </a>
     </template>
 

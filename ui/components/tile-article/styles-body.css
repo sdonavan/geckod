@@ -1,0 +1,66 @@
+.container ::content main
+{
+    display: none;
+
+    background-color: var(--app-palette-white);
+    color: var(--app-palette-black);
+    min-height: 50vh;
+    padding-top: 80px;
+    padding-left: 16%;
+    padding-right: 16%;
+
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+}
+
+.fullscreen ::content main
+{
+    display: block;
+}
+
+::content main p
+{
+    margin-top: 30px;
+}
+
+::content main code
+{
+    display: block;
+    padding: 10px !important;
+    margin-top: 5px;
+    font-size: 0.8rem !important;
+    white-space: pre-wrap !important;
+}
+
+::content main q:before,
+::content main q:after
+{
+    content: "\"";
+}
+
+::content main h3
+{
+    font-size: var(--font-size-big-3);
+    color: var(--app-palette-dark);
+    margin-top: 55px;
+    margin-bottom: 20px;
+    line-height: initial;
+}
+
+::content main h5
+{
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+::content main em
+{
+    color: var(--app-palette-dark);
+    font-weight: bold;
+}
+
+::content main a
+{
+    text-decoration: none;
+    color: var(--app-palette-accent);
+}

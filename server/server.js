@@ -15,17 +15,17 @@ app.set('view engine', 'html')
 app.set('views', config.staticFolder)
 
 
+var redirectRouter = require('./stream/redirect-router')
 var renderRouter = require('./stream/render-router')
-
+var apiRouter    = require('./stream/api-router')
 
 
 /* ============= Set Response Queue ============== */
 
-//app.use(compress({level: 1}))                     // Use Gzip compression
-app.use('', require('./stream/redirect-router'))  // Redirect www to canonial
+//app.use(compress({level: 1}))        // Use Gzip compression
+app.use('', redirectRouter)          // Redirect www to canonial
 app.use('/', renderRouter)           // Try to find a static site
-
-app.use(express.static(config.staticFolder))
+app.use('/api/', apiRouter)
 app.use(express.static(config.staticFolder))
 
 

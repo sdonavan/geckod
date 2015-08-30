@@ -13,10 +13,11 @@
         {
             distance: Number,
             bindTo: String,
-            activeOnPage: String
+            activeOnPage: String,
+            scroller: String
         },
 
-        ready: function()
+        attached: function()
         {
             if (typeof this.distance === 'undefined')
                 this.distance = 1
@@ -27,12 +28,22 @@
             else
                 this.element = this.parentNode
 
+            this.scrollTarget = this.closest(this.scroller)
 
+            this.alreadyAttached = true
+            if (this.triedToInitialize === true && this.triedToDestroy === false)
+                this.on()
         },
 
         
         on: function()
         {
+            if (this.alreadyAttached !== true)
+            {
+                this.triedToInitialize = true 
+                return
+            }
+
             if (this._on === true)
             {
                 console.warn("Attempting to turn on a parallax effect that was already on!")
@@ -45,14 +56,21 @@
             {
                 window.requestAnimationFrame(this._parallax.bind(this))
             }.bind(this)
-            document.addEventListener("scroll", this.parallaxAnimation)
+
+            this.scrollTarget.addEventListener("scroll", this.parallaxAnimation, false)
         },
 
         off: function()
         {
+            if (this.alreadyAttached !== true)
+            {
+                this.triedToDestroy = true 
+                return
+            }
+
             this._on = false
             this.element.style.transform = ''
-            document.removeEventListener("scroll", this.parallaxAnimation)
+            this.scrollTarget.removeEventListener("scroll", this.parallaxAnimation)
             this.parallaxAnimation = null
         },
 
@@ -61,7 +79,7 @@
             if (this._on === false)
                 console.warn("Warning in Parallax. Running aprallax althought it is turned off!")
 
-            this.element.style.transform = 'translateY(' + window.scrollY * this.distance + 'px)'
+            this.element.style.transform = 'translateY(' + this.scrollTarget.scrollTop * this.distance + 'px)'
         }
     })
 

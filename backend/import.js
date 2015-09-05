@@ -15,13 +15,13 @@ var db = new Datastore({ filename: filePath })
 db.loadDatabase()
 
 // Read all of the files
-fs.readdir(__dirname + '/articles/', function(err, files)
+fs.readdir(__dirname + '/items/', function(err, files)
 {
     files.forEach(function(fileName)
     {
-        var doc = require('./articles/' + fileName + '/metadata.js')
-        
-        fs.readFile('./articles/' + fileName + '/body.html', 'utf8', function (err,data) 
+        var doc = require('./items/' + fileName + '/metadata.js')
+
+        fs.readFile('./items/' + fileName + '/body.html', 'utf8', function (err,data)
         {
 			doc.main = data
 			db.insert(doc)

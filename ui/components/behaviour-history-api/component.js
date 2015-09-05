@@ -32,9 +32,10 @@ Polymer({
         {
             window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
         }
-
+        
         window.addEventListener("DOMContentLoaded", function(event) 
         {
+            console.log('daa')
             window.dispatchEvent(new CustomEvent('urlchange', {'detail': window.location.pathname}))
         })
     }

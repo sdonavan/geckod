@@ -9,7 +9,7 @@ var config          = require('./config')
 var app             = express()
 
 var swig            = require('swig')
-var customSwig      = new swig.Swig({varControls: ['{s{', '}s}'], tagControls: ['{s%', '%s}']});
+var customSwig      = new swig.Swig({autoescape: false, varControls: ['{s{', '}s}'], tagControls: ['{s%', '%s}']});
 app.engine('html', customSwig.renderFile)
 app.set('view engine', 'html')
 app.set('views', config.staticFolder)

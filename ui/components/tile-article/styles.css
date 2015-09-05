@@ -107,9 +107,9 @@
     justify-content: center;
 }
 
-.container.fullscreen header .metadata h2
+header ::content h2
 {
-
+    text-align: center;
     width: auto;
 }
 

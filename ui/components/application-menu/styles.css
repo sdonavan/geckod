@@ -67,8 +67,8 @@
 .icon::before,
 .icon::after
 {
-    color: white;
-    border-color: white;
+    color: var(--app-palette-white);
+    border-color: var(--app-palette-white);
     box-shadow: none;
     border: 0px solid;
     margin: 0;
@@ -90,7 +90,6 @@
 
 .gallery .icon
 {
-    opacity: 0.8;
     transform: rotate(90deg);
 }
 
@@ -113,7 +112,7 @@
 .home .icon:before
 {
     border:20px solid transparent;
-    border-bottom-color: white;
+    border-bottom-color: var(--app-palette-white);
     border-top:0
 }
 
@@ -126,7 +125,7 @@
     border:8px solid;
     border-top-width:10px;
     border-bottom:0;
-    color: white;
+    color: var(--app-palette-white);
 }
 
 .colored .icon,

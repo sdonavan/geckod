@@ -1,1 +1,1 @@
-Polymer({is:"tile-article",attached:function(){var a=this.querySelector("#main-header h2").innerHTML;this.realLink="/articles/"+this._stringToHash(a)},_stringToHash:function(a){return a.toLowerCase().replace(/ /g,"-").replace(/[^\w-]+/g,"")}});
+Polymer({is:"tile-article",properties:{link:String},ready:function(){this.realLink="/articles/"+this.link,this.apiLink="/api/article/"+this.link},loadBody:function(a){var b=this.querySelector("main"),c=this.querySelector("iron-ajax").lastResponse;c&&(b.innerHTML=c[0].main)}});

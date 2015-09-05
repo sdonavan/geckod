@@ -1,11 +1,11 @@
 {
   "name": "Geckod UI",
-  "dependencies": {
+  "dependencies": 
+  {
     "polymer": "*",
-    "paper-styles": "git://github.com/PolymerElements/paper-styles.git",
     "iron-ajax": "git://github.com/PolymerElements/iron-ajax#~1.0.4",
-    "prism": "*",
-    "prism-themes": "git://github.com/PrismJS/prism-themes.git",
-    "particles": "git://github.com/chrispaynter/particles.js.git"
+    "paper-styles": "git://github.com/PolymerElements/paper-styles.git",
+
+    "particles": "git://github.com/slytael/particles.js.git#master"
   }
 }

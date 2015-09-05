@@ -20,7 +20,12 @@ StaticRouter.get(['/', '/articles', '/articles/:id'], function(req, res)
 	        {
 	            if (a['date'])
 	                a['date'] = moment(a['date']).format('MMMM Do YYYY')
+
+	            // If the current article is being requested
+              	if (req.params.id == a['_id'])
+            		a['prerender'] = true
 	        })
+
 	        res.render( 'index', {articles: articles}, function(error, content)
 	        {
 	        	cache.put(req.originalUrl, content)

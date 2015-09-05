@@ -52,6 +52,12 @@ Polymer({
 
         // Setup work
         this.zoomed = true
+
+        target.addEventListener(this._transitionEndEventName(), function(e)
+        {
+            window.dispatchEvent(new CustomEvent('resize'))
+            target.removeEventListener(e.type, arguments.callee, false)
+        }, false)
     },
 
     _saveMetricsFromClass: function(target)

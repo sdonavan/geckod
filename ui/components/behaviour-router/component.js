@@ -14,6 +14,11 @@ Polymer({
         window.addEventListener("urlchange", this._toggle.bind(this), false)
     },
 
+    attached: function()
+    {
+        this._toggle({detail: window.location.pathname})
+    },
+
     _toggle: function(event)
     {
         var host = this.parentNode

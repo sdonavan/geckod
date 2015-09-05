@@ -1,5 +1,4 @@
 <link rel = "import" href = "../../components/behaviour-motion/behaviour-motion.html" />
-<link rel = "import" href = "../../components/service-api/service-api.html" />
 <link rel = "import" href = "../../components/behaviour-router/behaviour-router.html" />
 <link rel = "import" href = "../../components/tile-article/tile-article.html" />
 <link rel = "import" href = "../../components/tile-link/tile-link.html" />
@@ -11,7 +10,6 @@
     <link rel = "import" type = "css" href = "styles.css" />
 
     <template>
-        <service-api></service-api>
         <behaviour-motion factor = "-1.6" link = "/articles/.*"></behaviour-motion>
         <behaviour-router page="/articles/" active="removeInactiveClass" inactive="addInactiveClass"></behaviour-router>
         <content></content>

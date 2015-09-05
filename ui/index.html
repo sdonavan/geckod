@@ -6,10 +6,10 @@
     <head>
         <title> Geckod: Design &#38; Technology </title>
 
+        <script src = "/bower_components/webcomponentsjs/webcomponents.min.js"></script>
         <link rel = "import" href = "/bower_components/polymer/polymer.html" />
         <link rel = "import" href = "/components/global-styles/global-styles.html" />
 
-        <link rel = "import" href = "/components/behaviour-history-api/behaviour-history-api.html" />
         <link rel = "import" href = "/components/application-background/application-background.html" />
         <link rel = "import" href = "/components/application-gallery/application-gallery.html" />
         <link rel = "import" href = "/components/application-home/application-home.html" />
@@ -17,6 +17,7 @@
 
         <meta name="google-site-verification" content="7vVmXKkcl7e5t2POprZsVUWMuEOvCvwos_UDuJ98PMk" />
 
+        <link rel = "import" href = "/components/behaviour-history-api/behaviour-history-api.html" />
     </head>
 
     <body>
@@ -38,9 +39,9 @@
                             <span>{s{ tag }s}</span>
                         {s% endfor %s}
                     </tags>
-                    <img src = "http://www.last-video.com/wp-content/uploads/2013/11/superbe-image-de-poissons-sous-l-eau.jpg" />
-                    
-                    <main></main>
+                    <img src = "{s{ article.thumbnail }s}"></img>
+
+                    <main>{s% if article.prerender %s} {s{article.main}s} {s% endif %s}</main>
                 </tile-article>
             {s% endfor %s}
 

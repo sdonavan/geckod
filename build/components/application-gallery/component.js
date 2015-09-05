@@ -1,1 +1,1 @@
-Polymer({is:"application-gallery",ready:function(){this.addEventListener("zoomedin",function(a){this.classList.add("inactive-page")}.bind(this)),this.addEventListener("zoomedout",function(){this.classList.remove("inactive-page")}.bind(this))}});
+Polymer({is:"application-gallery",addInactiveClass:function(){this.classList.add("inactive-page")},removeInactiveClass:function(){this.classList.remove("inactive-page")}});

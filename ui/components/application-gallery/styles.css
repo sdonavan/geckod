@@ -1,7 +1,6 @@
 :host
 {
     position: absolute;
-    z-index: 2;
     width: 100vw;
 
     display: flex;
@@ -23,7 +22,7 @@
     padding: 5px;
     font-size: 0.8rem;
     margin: 4px;
-    color: white;
+    color: var(--app-palette-white);
     background-color: var(--app-palette-accent);
     @apply(--app-transition-fast);
 }

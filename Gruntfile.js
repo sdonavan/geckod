@@ -109,14 +109,14 @@ module.exports = function(grunt)
 
         components.forEach(function(dir)
         {
-            console.log(dir)
             var vulcan = new Vulcanize(
             {
                 inlineScripts: true,
                 inlineCss: true,
                 implicitStrip: true,
                 stripComments: false,
-                excludes: [new RegExp('\/components\/(?!' + dir + ')')]
+                excludes: [new RegExp('\/components\/(?!' + dir + ')'),
+                           new RegExp('\/bower_components\/(?!' + dir + ')')]
             })
 
             var fileName = __dirname + '/build/components/' + dir + '/' + dir + '.html'

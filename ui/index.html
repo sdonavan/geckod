@@ -30,18 +30,18 @@
 
         <application-gallery>
 
-            {s% for article in articles %s}
-                <tile-article link = "{s{ article._id }s}">
-                    <h2>{s{ article.title }s}</h2>
-                    <time>{s{ article.date }s}</time>
+            {s% for item in items %s}
+                <tile-article link = "{s{ item._id }s}">
+                    <h2>{s{ item.title }s}</h2>
+                    <time>{s{ item.date }s}</time>
                     <tags>
-                        {s% for tag in article.tags %s}
+                        {s% for tag in item.tags %s}
                             <span>{s{ tag }s}</span>
                         {s% endfor %s}
                     </tags>
-                    <img src = "{s{ article.thumbnail }s}"></img>
+                    <img src = "{s{ item.thumbnail }s}"></img>
 
-                    <main>{s% if article.prerender %s} {s{article.main}s} {s% endif %s}</main>
+                    <main>{s% if item.prerender %s} {s{item.main}s} {s% endif %s}</main>
                 </tile-article>
             {s% endfor %s}
 

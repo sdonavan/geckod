@@ -14,19 +14,19 @@ StaticRouter.get(['/', '/articles', '/articles/:id'], function(req, res)
 	if (cachedVersion !== null)
 		res.send(cachedVersion)
 	else
-	    config.model.getAllItems(function(articles)
+	    config.model.getAllItems(function(items)
 	    {
-	        articles.forEach(function(a)
+	        items.forEach(function(item)
 	        {
-	            if (a['date'])
-	                a['date'] = moment(a['date']).format('MMMM Do YYYY')
+	            if (item['date'])
+	                item['date'] = moment(item['date']).format('MMMM Do YYYY')
 
 	            // If the current article is being requested
-              	if (req.params.id == a['_id'])
-            		a['prerender'] = true
+              	if (req.params.id === item['_id'])
+            		item['prerender'] = true
 	        })
 
-	        res.render( 'index', {articles: articles}, function(error, content)
+	        res.render( 'index', {items: items}, function(error, content)
 	        {
 	        	cache.put(req.originalUrl, content)
 	        	res.send(content)

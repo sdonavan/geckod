@@ -1,1 +1,0 @@
-Polymer({is:"tile-article",properties:{link:String},ready:function(){this.realLink="/articles/"+this.link,this.apiLink="/api/article/"+this.link},loadBody:function(a){var b=this.querySelector("main"),c=this.querySelector("iron-ajax").lastResponse;c&&(b.innerHTML=c[0].main)}});

@@ -8,7 +8,7 @@ db.loadDatabase()
 
 module.exports = {}
 
-module.exports.getAllArticles = function(callback)
+module.exports.getAllItems = function(callback)
 {
     db.find({}, function(err, docs)
     {

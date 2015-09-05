@@ -8,13 +8,13 @@ var cache           = require('memory-cache')
 var StaticRouter = express.Router()
 StaticRouter.get(['/', '/articles', '/articles/:id'], function(req, res)
 {
-	// Look in the cache 
+	// Look in the cache
 	var cachedVersion = cache.get(req.originalUrl)
 
 	if (cachedVersion !== null)
 		res.send(cachedVersion)
 	else
-	    config.model.getAllArticles(function(articles)
+	    config.model.getAllItems(function(articles)
 	    {
 	        articles.forEach(function(a)
 	        {

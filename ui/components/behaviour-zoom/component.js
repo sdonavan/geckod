@@ -2,9 +2,9 @@ Polymer({
 
     is: "behaviour-zoom",
 
-    properties: 
+    properties:
     {
-        zoomInClass: String, 
+        zoomInClass: String,
         zoomed: {type: Boolean, value: false}
     },
 
@@ -20,14 +20,6 @@ Polymer({
         target.classList.remove(this.zoomInClass)
 
         var instance = this
-        target.addEventListener(this._transitionEndEventName(), function(e)
-        {
-            if (e.srcElement == target)
-            {
-                target.removeEventListener(e.type, arguments.callee, false)
-                instance._clearMetricsFromStyle(target)
-            }
-        }, false)
 
         instance.zoomed = false
     },
@@ -36,7 +28,7 @@ Polymer({
     {
         if (this.zoomed === true)
             return
-        
+
         var target = this.parentNode
 
         target.style.transition = '0s'

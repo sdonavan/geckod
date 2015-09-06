@@ -5,10 +5,7 @@
     background-color: var(--app-palette-white);
     color: var(--app-palette-black);
     min-height: 50vh;
-    padding-top: 80px;
-    padding-left: 16%;
-    padding-right: 16%;
-    padding-bottom: 140px;
+    padding: 80px 16% 140px 16%;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6rem;
@@ -34,7 +31,7 @@
     font-family: monospace;
 }
 
-::content main code:first-line 
+::content main code:first-line
 {
     line-height: 0px;
 }

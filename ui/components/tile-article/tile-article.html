@@ -1,12 +1,13 @@
 <link rel = "import" href = "../../components/behaviour-zoom/behaviour-zoom.html" />
 <link rel = "import" href = "../../components/behaviour-parallax/behaviour-parallax.html" />
 <link rel = "import" href = "../../components/effect-particle-system/effect-particle-system.html" />
+<link rel = "import" href = "../../components/effect-decomposer/effect-decomposer.html" />
 
 <link href = 'http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'/>
 
 <link rel = "import" href = "../../bower_components/iron-ajax/iron-ajax.html"/>
 
-
+<!-- Mono -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/mono-blue.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
 <script src = "../../bower_components/particles/particles.js"></script>
@@ -15,6 +16,8 @@
 
     <link rel = "import" type = "css" href = "styles.css" />
     <link rel = "import" type = "css" href = "styles-body.css" />
+    <link rel = "import" type = "css" href = "styles-article.css" />
+    <link rel = "import" type = "css" href = "styles-project.css" />
 
     <template>
 
@@ -22,7 +25,7 @@
 
         <div class = "container">
 
-            <behaviour-zoom zoom-in-class = 'fullscreen'>
+            <behaviour-zoom zoom-in-class = 'fullscreen' in-transition-class = 'transiting'>
                 <behaviour-router page="{{realLink}}" active="zoomIn" inactive="zoomOut" />
             </behaviour-zoom>
 
@@ -36,29 +39,42 @@
                         </behaviour-parallax>
 
                         <content select = "tags"></content>
-                        <content select = "h2"></content>
-                        <content select = "time"></content>
+
+                        <h2>
+                            <content select = "h2"></content>
+                            <effect-decomposer></effect-decomposer>
+                        </h2>
+
+                        <div class = "line"></div>
+                        
+                        <time>
+                            <effect-decomposer></effect-decomposer>
+                            <content select = "time"></content>
+                        </time>
                     </div>
 
                     <content select="img"></content><behaviour-parallax scroller = ".container" bind-to = "sibling" distance = '0.8'>
                         <behaviour-router page="{{realLink}}" active="on" inactive="off" />
                     </behaviour-parallax>
-                    
+
                     <effect-particle-system
-                        link = "{{realLink}}"
                         class = "big" number = "30" size = "80" speed = "1.1" color = "#62549C" opacity = "0.1">
+                        <behaviour-router page="{{realLink}}" active="on" inactive="off" />
                     </effect-particle-system>
+
                     <effect-particle-system
-                        link = "{{realLink}}"
                         class = "big" number = "90" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
+                        <behaviour-router page="{{realLink}}" active="on" inactive="off" />
                     </effect-particle-system>
+
                     <effect-particle-system
-                        link = "{{realLink}}"
                         class = "small" number = "120" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
+                        <behaviour-router page="{{realLink}}" active="on" inactive="off" />
                     </effect-particle-system>
+
                     <effect-particle-system
-                        link = "{{realLink}}"
                         class = "small" number = "60" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
+                        <behaviour-router page="{{realLink}}" active="on" inactive="off" />
                     </effect-particle-system>
                 </header>
             </a>

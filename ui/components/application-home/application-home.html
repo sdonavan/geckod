@@ -1,4 +1,5 @@
 <link rel = "import" href = "../../components/behaviour-motion/behaviour-motion.html" />
+<link rel = "import" href = "../../components/behaviour-router/behaviour-router.html" />
 <link rel = "import" href = "../../components/effect-autotype/effect-autotype.html" />
 
 
@@ -8,10 +9,14 @@
 
     <template>
         <h1>
-            <behaviour-motion factor = '1.8' link = "/"></behaviour-motion>
+
+            <behaviour-motion factor = '1.8'>
+                <behaviour-router page="/" active="on" inactive="off" />
+            </behaviour-motion>
+
             <span>Hey, I'm Slavin</span>
             <span>I live around Europe</span>
-            <span>I create digital things</span>
+            <span>I am a digital engineer</span>
             <span>I love
                 <effect-autotype>
                     <span>Motion Graphics</span>

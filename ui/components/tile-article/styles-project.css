@@ -1,0 +1,6 @@
+:host.project .container header .metadata
+{
+    align-items: left;
+    justify-content: flex-end;
+    padding: 4% 4%;
+}

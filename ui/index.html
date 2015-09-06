@@ -31,7 +31,8 @@
         <application-gallery>
 
             {s% for item in items %s}
-                <tile-article link = "{s{ item._id }s}">
+
+                <tile-article class = "{s{ item.type }s}" link = "{s{ item._id }s}">
                     <h2>{s{ item.title }s}</h2>
                     <time>{s{ item.date }s}</time>
                     <tags>
@@ -43,26 +44,9 @@
 
                     <main>{s% if item.prerender %s} {s{item.main}s} {s% endif %s}</main>
                 </tile-article>
+
             {s% endfor %s}
 
-            <tile-link>
-                <img src = "https://www.wonderplugin.com/wp-content/plugins/wonderplugin-lightbox/images/demo-image0.jpg" />
-                <h2>
-                    This is a test titleds
-                </h2>
-                <description>
-                    This is a really small description.
-                </description>
-                <tags>
-                    <span>Tag1</span>
-                    <span>Tag2></span>
-                </tags>
-            </tile-link>
-
-
-            <tile-link>
-                dawdaw
-            </tile-link>
         </application-gallery>
 
         <application-menu></application-menu>

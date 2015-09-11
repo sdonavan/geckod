@@ -1,6 +1,27 @@
-:host.project .container header .metadata
+:host.project header
+{
+    background: linear-gradient(135deg,var(--app-palette-dark) 0, var(--app-palette-medium) 100%);
+}
+
+:host.project header ::content img
+{
+    opacity: 0.2;
+}
+
+:host.project  header:hover ::content img,
+:host.project .fullscreen header ::content img
+{
+    opacity: 0.8;
+}
+
+:host.project header .metadata
 {
     align-items: left;
     justify-content: flex-end;
     padding: 4% 4%;
+}
+
+:host.project header time
+{
+    dispaly: none;
 }

@@ -14,7 +14,7 @@
 
 <dom-module id = "tile-article">
 
-    <link rel = "import" type = "css" href = "styles.css" />
+    <link rel = "import" type = "css" href = "styles-all.css" />
     <link rel = "import" type = "css" href = "styles-body.css" />
     <link rel = "import" type = "css" href = "styles-article.css" />
     <link rel = "import" type = "css" href = "styles-project.css" />
@@ -40,13 +40,10 @@
 
                         <content select = "tags"></content>
 
-                        <h2>
-                            <content select = "h2"></content>
-                            <effect-decomposer></effect-decomposer>
-                        </h2>
+                        <content select = "h2"></content>
 
                         <div class = "line"></div>
-                        
+
                         <time>
                             <effect-decomposer></effect-decomposer>
                             <content select = "time"></content>

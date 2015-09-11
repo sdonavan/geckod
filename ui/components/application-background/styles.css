@@ -9,7 +9,7 @@
 :host #main
 {
     height: 100%;
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
 }
 
 :host effect-particle-system
@@ -20,7 +20,7 @@
     position:absolute;
     top: 0;
     left: 0;
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
     z-index: 5;
 }
 

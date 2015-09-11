@@ -7,7 +7,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
 }
 
 :host.inactive-page

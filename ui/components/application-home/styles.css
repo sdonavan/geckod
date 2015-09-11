@@ -13,7 +13,7 @@
 
 :host h1
 {
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
     padding: 10px;
     font-size: var(--font-size-big-1);
 }
@@ -23,7 +23,7 @@
     display: block;
     padding-left: 10px;
     padding-right: 10px;
-    transition: transition: all var(--app-transition-fast);
+    transition: all var(--app-transition-accessories);
     cursor: pointer;
 }
 

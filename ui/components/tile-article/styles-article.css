@@ -1,22 +1,20 @@
-:host.article .container header
+:host.article header
 {
     background: linear-gradient(135deg,var(--app-palette-dark) 0, var(--app-palette-medium) 100%);
-    overflow: hidden;
 }
 
-:host.article .container:not(.fullscreen) header ::content img
+:host.article header ::content img
 {
     opacity: 0.1;
 }
 
-:host.article .container header:hover ::content img,
-:host.article .container.fullscreen header ::content img
+:host.article  header:hover ::content img,
+:host.article .fullscreen header ::content img
 {
-    width: 100%;
-    opacity: 0.4;
+    opacity: 0.25;
 }
 
-:host.article .container header .metadata
+:host.article header .metadata
 {
     align-items: center;
     justify-content: center;
@@ -24,7 +22,7 @@
     padding: 10% 14%;
 }
 
-:host.article .container header effect-particle-system
+:host.article header effect-particle-system
 {
     opacity: 0;
     position: absolute;
@@ -35,30 +33,33 @@
     top: 0;
     left: 0;
 
-    transition: all var(--app-transition-fast-delay);
+    transition: all var(--app-transition-navigation-delay);
 }
 
-:host.article .container.fullscreen header effect-particle-system
+:host.article .fullscreen header effect-particle-system
 {
     display: block;
     opacity: 1;
 }
 
-:host.article .metadata .line
+:host.article header .line
 {
     border-top: 1px solid var(--app-palette-accent);
-    transition: all var(--app-transition-fast);
+    transition: all var(--app-transition-accessories);
     width: 40%;
     width: 0;
     margin-top: 14px;
 }
 
-:host.article .container:hover .metadata .line
+:host.article header:hover .line,
+:host.article .fullscreen header .line
 {
     width: 40%;
 }
 
-:host.article .container header .metadata ::content time
+
+
+:host.article header ::content time
 {
     margin-top: 14px;
     text-align: center;
@@ -69,10 +70,11 @@
 {
     opacity: 0;
     transform: rotateX(90deg);
-    transition: all var(--app-transition-fast-delay);
+    transition: all var(--app-transition-accessories);
 }
 
-:host.article .container:hover header .metadata ::content time span
+:host.article header:hover ::content time span,
+:host.article .fullscreen header ::content time span
 {
     opacity: 1;
     transform: rotateX(0);

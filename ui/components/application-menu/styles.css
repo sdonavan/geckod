@@ -4,7 +4,7 @@
     z-index: 20;
     height: 100%;
     width: 100px;
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
 }
 
 :host.right
@@ -41,12 +41,12 @@
     width: 70px;
     height: 70px;
     border-radius: 100%;
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
 }
 
 :host span.colored
 {
-    transition: all var(--app-transition-fast);
+    transition: all var(--app-transition-navigation);
     background-color: var(--app-palette-accent);
 }
 
@@ -76,7 +76,7 @@
     height: 0;
     left: 0;
     top: 0;
-    transition: all var(--app-transition-slow);
+    transition: all var(--app-transition-navigation);
 }
 
 .gallery .icon,
@@ -132,5 +132,5 @@
 .colored .icon:after,
 .colored .icon:before
 {
-    transition: all var(--app-transition-fast);
+    transition: all var(--app-transition-navigation);
 }

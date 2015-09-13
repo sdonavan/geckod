@@ -5,5 +5,5 @@ module.exports =
     type: 'project',
     date: new Date('08/12/2015'),
     tags: ['HTML5', 'Web Components'],
-	thumbnail: '/media/images/thecenter.jpg'
+	thumbnail: '/media/thumbnails/thecenter.jpg'
 }

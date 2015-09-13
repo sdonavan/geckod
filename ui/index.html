@@ -6,40 +6,141 @@
     <head>
         <title> Geckod: Design &#38; Technology </title>
 
+        <!-- Polymer -->
         <script src = "/bower_components/webcomponentsjs/webcomponents.min.js"></script>
         <link rel = "import" href = "/bower_components/polymer/polymer.html" />
-        <link rel = "import" href = "/components/global-styles/global-styles.html" />
 
-        <link rel = "import" href = "/components/application-background/application-background.html" />
-        <link rel = "import" href = "/components/application-gallery/application-gallery.html" />
-        <link rel = "import" href = "/components/application-home/application-home.html" />
+        <!-- Stylesheets -->
+        <link rel = "import" href = "/stylesheets/all-styles.html" />
+
+        <!-- All behaviours -->
+        <link rel = "import" href = "/behaviours/parallax.html" />
+        <link rel = "import" href = "/behaviours/zoom.html" />
+        <link rel = "import" href = "/behaviours/decompose-element.html" />
+        <link rel = "import" href = "/behaviours/autotype.html" />
+        <link rel = "import" href = "/behaviours/history-api.html" />
+        <link rel = "import" href = "/behaviours/router.html" />
+
+        <!-- All components -->
+        <link rel = "import" href = "/components/particle-system/particle-system.html" />
+        <link rel = "import" href = "/components/tile-article/tile-article.html" />
         <link rel = "import" href = "/components/application-menu/application-menu.html" />
-
-        <meta name="google-site-verification" content="7vVmXKkcl7e5t2POprZsVUWMuEOvCvwos_UDuJ98PMk" />
-
-        <link rel = "import" href = "/components/behaviour-history-api/behaviour-history-api.html" />
     </head>
 
     <body>
 
         <behaviour-history-api></behaviour-history-api>
 
-        <application-background></application-background>
+        <section id = "background">
+            <video id = "main" autoplay = "autoplay" loop = "true">
 
-        <application-home></application-home>
+                <behaviour-router
+                    page = "/"
+                    hide-class = "slide-out" />
+                </behaviour-router>
 
-        <application-gallery>
+                <source src = "/videos/background.mp4" type="video/mp4">
+                <source src = "/videos/background.webm" type="video/webm">
+            </video>
+
+            <video id = "background-filler">
+                <source src = "/videos/smaller.mp4" type="video/mp4">
+                <source src = "/videos/smaller.webm" type="video/webm">
+            </video>
+
+            <particle-system class = "big" number = "8" size = "80" speed = "1.1" color = "#62549C" opacity = "0.07">
+                <behaviour-router
+                    page = "/"
+                    active = "on"
+                    inactive = "off"
+                    hide-class = "slide-out" />
+                </behaviour-router>
+            </particle-system>
+
+            <particle-system class = "big" number = "20" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
+                <behaviour-router
+                    page = "/"
+                    active = "on"
+                    inactive = "off"
+                    hide-class = "slide-out" />
+                </behaviour-router>
+            </particle-system>
+
+            <particle-system class = "small" number = "30" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
+                <behaviour-router
+                    page = "/"
+                    active = "on"
+                    inactive = "off"
+                    hide-class = "slide-out" />
+                </behaviour-router>
+            </particle-system>
+
+            <particle-system class = "small" number = "20" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
+                <behaviour-router
+                    page = "/"
+                    active = "on"
+                    inactive = "off"
+                    hide-class = "slide-out" />
+                </behaviour-router>
+            </particle-system>
+        </section>
+
+        <section id = "home">
+
+            <behaviour-router
+                page="/"
+                hide-class = "slide-out">
+            </behaviour-router>
+
+            <h1>
+
+                <span>Hey, I'm Slavin</span>
+                <span>I live around Europe</span>
+                <span>I am a digital engineer</span>
+                <span>I love
+                    <effect-autotype>
+                        <span>Motion Graphics</span>
+                        <span>Material Design</span>
+                        <span>Functional Programming</span>
+                        <span>Parallel Computing</span>
+                    </effect-autotype>
+                </span>
+            </h1>
+        </section>
+
+        <section id = "gallery" class = "slide-out">
+
+            <behaviour-router
+                page = "/articles/.*"
+                hide-class = "slide-out"
+                active-class = "show-text">
+            </behaviour-router>
+
+            <behaviour-router
+                page = "/articles/"
+                hide-class = "inactive-page">
+            </behaviour-router>
 
             {s% for item in items %s}
 
                 <tile-article class = "{s{ item.type }s}" link = "{s{ item._id }s}">
-                    <h2>{s{ item.title }s}</h2>
-                    <time>{s{ item.date }s}</time>
+
+                    <h2>
+                        <effect-decomposer base-delay = "1"></effect-decomposer>
+                        {s{ item.title }s}
+                    </h2>
+
+                    <time>
+                        <effect-decomposer base-delay = "0"></effect-decomposer>
+                        {s{ item.date }s}
+                    </time>
+
                     <tags>
                         {s% for tag in item.tags %s}
                             <span>{s{ tag }s}</span>
                         {s% endfor %s}
                     </tags>
+
                     <img src = "{s{ item.thumbnail }s}"></img>
 
                     <main>{s% if item.prerender %s} {s{item.main}s} {s% endif %s}</main>
@@ -47,7 +148,7 @@
 
             {s% endfor %s}
 
-        </application-gallery>
+        </section>
 
         <application-menu></application-menu>
 

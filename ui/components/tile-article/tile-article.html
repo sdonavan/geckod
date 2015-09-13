@@ -1,16 +1,15 @@
-<link rel = "import" href = "../../components/behaviour-zoom/behaviour-zoom.html" />
-<link rel = "import" href = "../../components/behaviour-parallax/behaviour-parallax.html" />
-<link rel = "import" href = "../../components/effect-particle-system/effect-particle-system.html" />
-<link rel = "import" href = "../../components/effect-decomposer/effect-decomposer.html" />
-
+<!-- Google font -->
 <link href = 'http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'/>
 
-<link rel = "import" href = "../../bower_components/iron-ajax/iron-ajax.html"/>
+<!-- Ajax -->
+<link rel = "import" href = "/bower_components/iron-ajax/iron-ajax.html"/>
 
 <!-- Mono -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/mono-blue.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
 <script src = "../../bower_components/particles/particles.js"></script>
+
+
 
 <dom-module id = "tile-article">
 
@@ -26,7 +25,10 @@
         <div class = "container">
 
             <behaviour-zoom zoom-in-class = 'fullscreen' in-transition-class = 'transiting'>
-                <behaviour-router page="{{realLink}}" active="zoomIn" inactive="zoomOut" />
+                <behaviour-router
+                    page="{{realLink}}"
+                    active="zoomIn"
+                    inactive="zoomOut" />
             </behaviour-zoom>
 
             <a href = "{{realLink}}">
@@ -44,35 +46,32 @@
 
                         <div class = "line"></div>
 
-                        <time>
-                            <effect-decomposer></effect-decomposer>
-                            <content select = "time"></content>
-                        </time>
+                        <content select = "time"></content>
                     </div>
 
                     <content select="img"></content><behaviour-parallax scroller = ".container" bind-to = "sibling" distance = '0.8'>
                         <behaviour-router page="{{realLink}}" active="on" inactive="off" />
                     </behaviour-parallax>
 
-                    <effect-particle-system
+                    <particle-system
                         class = "big" number = "30" size = "80" speed = "1.1" color = "#62549C" opacity = "0.1">
                         <behaviour-router page="{{realLink}}" active="on" inactive="off" />
-                    </effect-particle-system>
+                    </particle-system>
 
-                    <effect-particle-system
+                    <particle-system
                         class = "big" number = "90" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
                         <behaviour-router page="{{realLink}}" active="on" inactive="off" />
-                    </effect-particle-system>
+                    </particle-system>
 
-                    <effect-particle-system
+                    <particle-system
                         class = "small" number = "120" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
                         <behaviour-router page="{{realLink}}" active="on" inactive="off" />
-                    </effect-particle-system>
+                    </particle-system>
 
-                    <effect-particle-system
+                    <particle-system
                         class = "small" number = "60" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
                         <behaviour-router page="{{realLink}}" active="on" inactive="off" />
-                    </effect-particle-system>
+                    </particle-system>
                 </header>
             </a>
 

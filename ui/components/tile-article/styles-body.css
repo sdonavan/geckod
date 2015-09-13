@@ -8,7 +8,7 @@
     padding: 80px 16% 140px 16%;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.6rem;
+    line-height: 160%;
 }
 
 .fullscreen ::content main
@@ -67,4 +67,25 @@
 {
     text-decoration: none;
     color: var(--app-palette-accent);
+}
+
+::content main table
+{
+    font-size: 0.75rem;
+    line-height: 120%;
+    margin-top: 30px;
+}
+
+::content main table th
+{
+    font-weight: bold;
+}
+
+::content main table th,
+::content main table td
+{
+    padding: 4px;
+    border: dashed 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    vertical-align: middle;
 }

@@ -95,13 +95,32 @@ header ::content tags span
 
 header ::content h2
 {
-    margin: 12px 0 12px 0;
+    margin: 2% 0 2% 0;
     font-size: var(--font-size-big-3);
     transition: all var(--app-transition-navigation);
 }
-
-.fullscreen header ::content h2
-{
-    font-size: var(--font-size-big-1);
-}
 /* ======== /Metadata ======== */
+
+
+
+
+:host header ::content time
+{
+    margin-top: 14px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+:host .metadata ::content time span
+{
+    opacity: 0;
+    transform: rotateX(90deg);
+    transition: all var(--app-transition-accessories);
+}
+
+:host header:hover ::content time span,
+:host .fullscreen header ::content time span
+{
+    opacity: 1;
+    transform: rotateX(0);
+}

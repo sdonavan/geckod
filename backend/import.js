@@ -19,9 +19,9 @@ fs.readdir(__dirname + '/items/', function(err, files)
 {
     files.forEach(function(fileName)
     {
-        var doc = require('./items/' + fileName + '/metadata.js')
+        var doc = require(__dirname + '/items/' + fileName + '/metadata.js')
 
-        fs.readFile('./items/' + fileName + '/body.html', 'utf8', function (err,data)
+        fs.readFile(__dirname + '/items/' + fileName + '/body.html', 'utf8', function (err,data)
         {
 			doc.main = data
 			db.insert(doc)

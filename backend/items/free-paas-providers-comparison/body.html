@@ -1,0 +1,291 @@
+<aside>
+    <em>Disclaimer</em>: This review is completely independent.
+    I am speaking on my personal behalf, and am by no way influenced by the listed companies.
+</aside>
+
+<p>
+    Assumption: you are familiar with the concept
+    of
+    <a href = "https://en.wikipedia.org/wiki/Platform_as_a_service">
+        PaaS
+    </a>. Bellow you can find an extensive comparison of popular <em>PaaS</em>
+    hosting solutions, and how their <em>free</em> tier ranks.
+</p>
+
+    <table>
+
+        <tr>
+            <th colspan = "2"><em>General</em></th>
+            <th colspan = "4"><em>Platforms</em></th>
+            <th colspan = "5"><em>Technical</em></th>
+        </tr>
+        <tr>
+            <th>Company</th>
+            <th>PaaS</th>
+
+            <th>Runtimes</th>
+            <th>Databases</th>
+            <th>APIs / Services</th>
+            <th>Addons</th>
+
+            <th>Number of Apps</th>
+            <th>Storage</th>
+            <th>Memory</th>
+            <th>Bandwidth</th>
+            <th>CPU Cores</th>
+        </tr>
+
+
+        <tr>
+            <td>Red Hat</td>
+            <td>
+                <a href = "https://www.openshift.com">
+                <img style = "width: 70px"
+                     src = "https://upload.wikimedia.org/wikipedia/en/3/3a/OpenShift-LogoType.svg"/>
+                </a>
+            </td>
+
+            <td>Java EE(JBoss, Tomcat), PHP(Zend), Perl, Python, Ruby, Node.js</td>
+            <td>MongoDB, MySQL, PostgreSQL</td>
+            <td>Jenkins, SwitchYard, Cron, SSH</td>
+            <td>
+                <a href = "https://hub.openshift.com/addons/">Free add-on list</a>
+            </td>
+            <td>3</td>
+            <td>3 * 1GB (Disk / Database)</td>
+            <td>3 * 512MB</td>
+            <td>Unlimited</td>
+            <td>3</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <td>Salesforce</td>
+            <td>
+                <a href = "https://www.heroku.com">
+                <img style = "width: 70px"
+                     src = "http://www.wizarddevelopment.com/assets/heroku-logo-fed730300aab0681454914855ef3c445.png" />
+                </a>
+            </td>
+
+            <td>Ruby, Java, Node.Js, Python, PHP, Clojure, Scala, Go</td>
+            <td>Postgres, Redis</td>
+            <td>Git</td>
+            <td><a href = "https://elements.heroku.com/addons">
+                Free add-on list</a></td>
+
+
+            <td>1</td>
+            <td>10K Rows / 25MB Database, 1 GB Disk</td>
+            <td>512MB</td>
+            <td>2TB / Month</td>
+            <td>18/24 (A single core, must be inactive at least 6 hours a day)</td>
+        </tr>
+
+
+
+        <tr>
+            <td>Microsoft</td>
+            <td>
+                <a href = "https://azure.microsoft.com/">
+                <img style = "width: 70px"
+                     src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2000px-Windows_logo_-_2012.svg.png" />
+                <div>(Via Dreamspark)</div>
+                </a>
+            </td>
+
+            <td>.NET, Java, PHP, Node.js, Python</td>
+            <td>None Free</td>
+            <td>Git, TFS, GitHub, Visual Studio Online</td>
+            <td><a href = "http://azure.microsoft.com/en-us/marketplace/developer-services/all/">
+                Free add-on list</a></td>
+
+
+            <td>10</td>
+            <td>1 GB Disk</td>
+            <td>1024MB per region, 3 regions</td>
+            <td>165 MB per day</td>
+            <td>1/24 (A core for max 60 min / day)</td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <td>Google</td>
+            <td>
+                <a href = "https://cloud.google.com/appengine/">
+                <img style = "width: 70px"
+                     src = "http://3.bp.blogspot.com/-shlkF4-lOrI/UqEk25whCBI/AAAAAAAAAV4/vAwo6UN2Sis/s1600/appengine_final.png"/>
+                </a>
+            </td>
+
+            <td>Python, Java, PHP, Go</td>
+            <td>MySQL, Google NoSQL Datastore</td>
+            <td>Git, Jenkins, IDE SDKs</td>
+            <td></td>
+
+            <td>Unlimited</td>
+            <td>
+                <span>1GB Disk</span>,
+                <span>1GB Database</span>,
+                <span> 5GB
+                    <a href = "https://cloud.google.com/appengine/docs/quotas?hl=en#Default_Gcs_Bucket">
+                        Bucket
+                    </a>
+                </span>
+            </td>
+            <td>Unlimited</td>
+            <td>1GB Outgoing + 1GB Incoming / Day</td>
+            <td>28/24 (28 instance hours)</td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td>IBM</td>
+            <td>
+                <a href = "http://www.ibm.com/cloud-computing/bluemix/">
+                <img style = "width: 70px"
+                     src = "http://www.dbtekpro.com/wp-content/uploads/2015/07/bluemix-logo.png"/>
+                </a>
+            </td>
+
+            <td>Java, Node.js, Go, PHP, Python, Ruby, .NET (Mono)</td>
+            <td>Mongo, MySQL, PostreSQL, IBM XPages, Redis</td>
+            <td>Git, Cloud Foundry</td>
+            <td>
+                <a href = "https://console.ng.bluemix.net/catalog/">
+                    Free add-on list
+                </a>
+            </td>
+
+            <td>Unlimited</td>
+            <td>
+                2GB per App
+            </td>
+            <td>512MB</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+        </tr>
+
+        <tr>
+            <td>Nitrous</td>
+            <td>
+                <a href = "https://www.nitrous.io/">
+                <img style = "width: 70px"
+                     src = "https://datafox-data.s3.amazonaws.com/images/cb_f4c94c311b812aa20628f1c32ba52c88.png"/>
+                </a>
+            </td>
+
+            <td>Ruby, Python, Node.js, PHP, Go, Java, (Extensible)</td>
+            <td>Custom (Docker Based)</td>
+            <td>Docker, SSH</td>
+            <td>
+                Custom (Docker Based)
+            </td>
+
+            <td>1</td>
+            <td>
+                1GB
+            </td>
+            <td>5GB</td>
+            <td>Unlimited</td>
+            <td>1 Core</td>
+
+        </tr>
+
+
+
+
+        <tr>
+            <td>App Harbor</td>
+            <td>
+                <a href = "https://appharbor.com/">
+                    <img style = "width: 70px"
+                         src = "https://pbs.twimg.com/profile_images/1692129271/appharbor-logo_400x400.png"/>
+                </a>
+            </td>
+
+            <td>.NET</td>
+            <td>PostgreSQL, MySQL, Redis, MongoDB</td>
+            <td>Git, Mercurial, Subversion, Team Foundation Server</td>
+            <td>
+                <a href = "https://appharbor.com/addons">Free add-on list</a>
+            </td>
+
+            <td>1</td>
+            <td>Unlimited Disk, 20MB Postgre, 20MB MySQL, 30MB Redis</td>
+            <td>512 MB</td>
+            <td>100GB/month</td>
+            <td>1 Core(~600MHz)</td>
+
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td>Cloudcontrol</td>
+            <td>
+                <a href = "https://www.cloudcontrol.com">
+                    <img style = "width: 70px"
+                         src = "http://blog.quotaguard.com/wp-content/uploads/2014/07/cloudcontrollogo.png" />
+                </a>
+            </td>
+
+            <td>Java, Ruby, PHP, Python, (Extensible)</td>
+            <td>PostgreSQL, Redis, MongoDB, MySQL</td>
+            <td>Git, Bazaar, CLI</td>
+            <td><a href = "https://www.cloudcontrol.com/add-ons">
+                Free add-on list</a></td>
+
+
+            <td>1</td>
+            <td>200MB Disk, 20MB Postgre, 496MB MongoDB</td>
+            <td>128MB</td>
+            <td>Unlimited</td>
+            <td>1 Core</td>
+        </tr>
+    </table>
+
+    <h4>Notes:</h4>
+    <p>
+        Almost all of the platforms can scale freely. Most of the platform scale painlessly. It works
+        by adding a new CPU core, running a copy of the application, with a load balancing server that automatically
+        distributes the request between the application instances.
+    </p>
+
+    <p>
+        Almost all platforms have a terrible initial response time. In the free tier, your application is
+        swaped out of memory after some n minutes of inactivity. That means that the first user in every n-minute
+        time interval needs to wait for the application to be loaded into memory. If the PaaS is runnins SSD's,
+        i've measured the delay to be around 1.5s. The worst performer is
+        <a href = "https://azure.microsoft.com/en-us/?b=16.33">Microsoft Azure</a>, where I measure an average of 4s delay.
+        The best performer goes to <a href = "https://console.ng.bluemix.net/">IBM's Bluemix</a> with 0s delay.
+        Bluemix is running on Cloud Foundry, which seems to not swap out processes at all.
+    </p>
+
+    <p>
+        In rare cases (Azure) applications don't allow for own domains.
+    </p>

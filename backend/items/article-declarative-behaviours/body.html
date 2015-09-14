@@ -50,7 +50,7 @@ $('#my-selector').colorOnClick()
 <div class = "comparison">
 
     <div>
-        <h5>Imperative</h5>
+        <h4>Imperative</h4>
         The imperative approach has <em>two binding points for each element</em>,
         Firstly, each element's id must be known:
 <code class = "language html">
@@ -70,7 +70,7 @@ colorOnClick(document.querySelector('#div2'))
 
 
     <div>
-        <h5>Declarative</h5>
+        <h4>Declarative</h4>
 
         The declarative approach has a <em>single binding point per instance</em>.
         The behavior is nested
@@ -106,7 +106,7 @@ Having a single binding point minimizes changes overhead and eases debugging.
 <div class = "comparison">
 
     <div>
-        <h5>Imperative</h5>
+        <h4>Imperative</h4>
         An uniform access pattern isn't statically enforced.
         All developers find creative ways to access their plug-ins.
 <code class = "language javascript">
@@ -128,7 +128,7 @@ songAPI.play() // play a song
 
 
      <div>
-         <h5>Declarative</h5>
+         <h4>Declarative</h4>
          Accessing an interface of a behavior here is <em>uniform</em>
          across all behaviors. It is also <em>semantic</em>,
          as it uses the native access patterns.
@@ -170,7 +170,7 @@ states of the UI.
 
 <div class = "comparison">
     <div>
-        <h5>Imperative</h5>
+        <h4>Imperative</h4>
         When using an imperative approach, a prerendered state is cumbersome.
         The templating engine needs to render JavaScript, which has poor templating
         support ans is in general plain fugly.
@@ -185,7 +185,7 @@ myFunctionality({{param1}}, {{param2}}, {{param3}})
     </div>
 
     <div>
-        <h5>Declarative</h5>
+        <h4>Declarative</h4>
         Using a declarative aproach is consistent with rendering html.
 <code class = "language html">
 &lt;element>
@@ -210,7 +210,7 @@ myFunctionality({{param1}}, {{param2}}, {{param3}})
 <div class = "comparison">
 
     <div>
-        <h5>Imperative</h5>
+        <h4>Imperative</h4>
         Inter-functionality communication using the most common pattern: (events)
         in a imperative UI involves firing an event on the host element.
 <code class = "language javascript">
@@ -223,7 +223,7 @@ elem.addEventListener('zoomed', ..)
     </div>
 
     <div>
-        <h5>Declarative</h5>
+        <h4>Declarative</h4>
         For better or for worse, the declarative approach gives the freedom to
         to work with events, generated and contained within functionalities.
         This is helpful if you need to tie an event to specific functionality.

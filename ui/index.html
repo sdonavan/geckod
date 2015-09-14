@@ -10,8 +10,6 @@
         <script src = "/bower_components/webcomponentsjs/webcomponents.min.js"></script>
         <link rel = "import" href = "/bower_components/polymer/polymer.html" />
 
-        <!-- Stylesheets -->
-        <link rel = "import" href = "/stylesheets/all-styles.html" />
 
         <!-- All behaviours -->
         <link rel = "import" href = "/behaviours/parallax.html" />
@@ -22,6 +20,7 @@
         <link rel = "import" href = "/behaviours/router.html" />
 
         <!-- All components -->
+        <link rel = "import" href = "/components/styles/styles.html" />
         <link rel = "import" href = "/components/particle-system/particle-system.html" />
         <link rel = "import" href = "/components/tile-article/tile-article.html" />
         <link rel = "import" href = "/components/application-menu/application-menu.html" />
@@ -36,7 +35,10 @@
 
                 <behaviour-router
                     page = "/"
-                    hide-class = "slide-out" />
+                    active = "play"
+                    inactive = "pause"
+                    inactive-delay
+                    hide-class = "slide-out">
                 </behaviour-router>
 
                 <source src = "/videos/background.mp4" type="video/mp4">
@@ -53,6 +55,7 @@
                     page = "/"
                     active = "on"
                     inactive = "off"
+                    inactive-delay
                     hide-class = "slide-out" />
                 </behaviour-router>
             </particle-system>
@@ -62,6 +65,7 @@
                     page = "/"
                     active = "on"
                     inactive = "off"
+                    inactive-delay
                     hide-class = "slide-out" />
                 </behaviour-router>
             </particle-system>
@@ -71,6 +75,7 @@
                     page = "/"
                     active = "on"
                     inactive = "off"
+                    inactive-delay
                     hide-class = "slide-out" />
                 </behaviour-router>
             </particle-system>
@@ -80,6 +85,7 @@
                     page = "/"
                     active = "on"
                     inactive = "off"
+                    inactive-delay
                     hide-class = "slide-out" />
                 </behaviour-router>
             </particle-system>
@@ -126,7 +132,7 @@
                 <tile-article class = "{s{ item.type }s}" link = "{s{ item._id }s}">
 
                     <h2>
-                        <effect-decomposer base-delay = "1"></effect-decomposer>
+                        <effect-decomposer base-delay = "1.2"></effect-decomposer>
                         {s{ item.title }s}
                     </h2>
 

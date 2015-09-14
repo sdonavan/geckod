@@ -65,32 +65,9 @@ module.exports = function(grunt)
         }
     })
 
-    grunt.task.registerTask('vulcanizerMain', 'A sample .', function(arg1, arg2)
+    grunt.task.registerTask('redeployDatabase', "Redeploy the database", function()
     {
-            var done = this.async()
-
-            var vulcan = new Vulcanize(
-            {
-                inlineScripts: true,
-                abspath: '',
-                inputUrl: '',
-                inlineCss: true,
-                implicitStrip: true,
-                stripComments: false,
-                excludes: [new RegExp('\/components\/')]
-            })
-
-            var fileName = 'build//bower_components/polymer/polymer.html'
-
-            console.log(fileName)
-
-            vulcan.process(fileName, function(err, inlinedHtml)
-            {
-                fs.writeFile(fileName, inlinedHtml, function(err)
-                {
-                    done()
-                })
-            })
+        require('./backend/import')
     })
 
     grunt.task.registerTask('vulcanizer', 'A sample task that logs stuff.', function(arg1, arg2)
@@ -115,14 +92,17 @@ module.exports = function(grunt)
                 inlineCss: true,
                 implicitStrip: true,
                 stripComments: false,
-                excludes: [new RegExp('\/components\/(?!' + dir + ')'),
-                           new RegExp('\/bower_components\/(?!' + dir + ')')]
+                excludes: [new RegExp('\/bower_components\/')]
             })
 
             var fileName = __dirname + '/build/components/' + dir + '/' + dir + '.html'
 
             vulcan.process(fileName, function(err, inlinedHtml)
             {
+                console.log("#####3")
+                console.log(fileName)
+                console.log(inlinedHtml)
+                console.log(err)
                 fs.writeFile(fileName, inlinedHtml, function(err)
                 {
 
@@ -137,6 +117,6 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-contrib-uglify')
 
     // Default task(s).
-    grunt.registerTask('default', ['copy', 'minifyPolymer', 'minifyPolymerCSS', 'uglify', 'vulcanizerMain', 'vulcanizer'])
+    grunt.registerTask('default', ['redeployDatabase', 'copy', 'minifyPolymer', 'minifyPolymerCSS', 'uglify', 'vulcanizer'])
 
 }

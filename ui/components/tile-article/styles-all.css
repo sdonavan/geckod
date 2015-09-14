@@ -10,7 +10,8 @@
     width: 100%;
     height: 100%;
     display: block;
-    transition: all var(--app-transition-navigation);
+    transition: all var(--app-transition-zoom);
+    overflow: hidden;
 }
 
 .container.fullscreen
@@ -30,6 +31,11 @@
 }
 
 
+
+
+
+
+
 /* ========= Header ============ */
 header
 {
@@ -38,14 +44,17 @@ header
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all var(--app-transition-navigation);
+    background: linear-gradient(135deg,var(--app-palette-dark) 0, var(--app-palette-medium) 100%);
+    transition: height var(--app-transition-zoom);
 }
 
 .fullscreen header
 {
     height: 100vh;
 }
-/* ========= ==========*/
+/* ========= /Header ==========*/
+
+
 
 
 /* ======== img ========== */
@@ -61,14 +70,19 @@ header ::content img
     z-index: 0;
     top: 0;
     width: 104%;
+    opacity: 0.1;
 }
 
 header:hover ::content img,
 .fullscreen header ::content img
 {
     width: 100%;
+    opacity: 0.25;
 }
 /* ======== /img ========== */
+
+
+
 
 
 /* ======== Metadata ======== */
@@ -77,10 +91,23 @@ header .metadata
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    display: flex;
     position: relative;
     z-index: 5;
+    transition: height var(--app-transition-zoom);
+
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10% 14%;
+    height: 100%;
+}
+
+.fullscreen header .metadata
+{
+    padding: 0;
+    height: 50%;
 }
 
 header ::content tags span
@@ -97,12 +124,8 @@ header ::content h2
 {
     margin: 2% 0 2% 0;
     font-size: var(--font-size-big-3);
-    transition: all var(--app-transition-navigation);
+    transition: all var(--app-transition-zoom);
 }
-/* ======== /Metadata ======== */
-
-
-
 
 :host header ::content time
 {
@@ -124,3 +147,77 @@ header ::content h2
     opacity: 1;
     transform: rotateX(0);
 }
+
+header .line
+{
+    border-top: 1px solid var(--app-palette-accent);
+    transition: all var(--app-transition-accessories);
+    width: 40%;
+    width: 0;
+    margin-top: 14px;
+}
+
+header:hover .line,
+.fullscreen header .line
+{
+    width: 40%;
+}
+/* ======== /Metadata ======== */
+
+
+/* ======== Particles ======== */
+header particle-system
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: all var(--app-transition-zoom);
+}
+/* ======== /Particles ======== */
+
+
+
+
+/* ======== Content ======== */
+.background
+{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E8EAF6;
+
+    height: 0;
+    overflow: hidden;
+    transition: all var(--app-transition-zoom);
+}
+
+.fullscreen .background
+{
+    height: auto;
+    overflow: visible;
+    padding: 0 6% 6% 6%;
+}
+
+::content main
+{
+    background-color: var(--app-palette-white);
+    color: var(--app-palette-black);
+    transition: all var(--app-transition-zoom);
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0;
+    line-height: 160%;
+    padding: 6% 4%;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.fullscreen ::content main
+{
+    margin-top: -50vh;
+    opacity: 1;
+}
+/* ======== Content ======== */

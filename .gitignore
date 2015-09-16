@@ -1,4 +1,5 @@
-geckod-3.0.impl
+.idea
+geckod-3.0.iml
 node_modules
 bower_components
 /build

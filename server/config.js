@@ -1,6 +1,6 @@
 var config =
 {
-    staticFolder: __dirname + '/../ui/',
+    staticFolder: __dirname + '/../build/',
     model       : require('../backend/model')
 }
 

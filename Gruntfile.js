@@ -99,10 +99,6 @@ module.exports = function(grunt)
 
             vulcan.process(fileName, function(err, inlinedHtml)
             {
-                console.log("#####3")
-                console.log(fileName)
-                console.log(inlinedHtml)
-                console.log(err)
                 fs.writeFile(fileName, inlinedHtml, function(err)
                 {
 

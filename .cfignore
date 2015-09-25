@@ -1,9 +1,1 @@
-/node_modules
-/ui
-.git
-.idea
-geckod-3.0.iml
-
-Gruntfile.js
-package.json
 

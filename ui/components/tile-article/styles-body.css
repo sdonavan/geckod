@@ -83,3 +83,14 @@
     padding: 10px;
     font-style: italic;
 }
+
+::content main .links
+{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+::content main .links > *
+{
+    margin: 1rem;
+}

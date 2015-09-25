@@ -4,7 +4,7 @@
     z-index: 20;
     height: 100%;
     width: 100px;
-    transition: all var(--app-transition-zoom);
+    transition: all var(--app-transition-navigation);
 }
 
 :host.right

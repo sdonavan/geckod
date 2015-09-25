@@ -1,7 +1,8 @@
 var config =
 {
-    staticFolder: __dirname + '/../build/',
-    model       : require('../backend/model')
+    staticFolder: __dirname + '/../ui/',
+    database    : __dirname + '/backend/geckod.nedb',
+    model       : require('./backend/model')
 }
 
 module.exports = config

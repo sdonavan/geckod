@@ -1,0 +1,481 @@
+<p>
+
+    A common <q>Design Pattern</q> in the mess that is Web UI's involves using
+
+    an already built jQuery functionalities. Let's imagine we have a plug-in which
+
+    colors an element on a click. The plug-in would be used in the following way:
+
+    <code class = "language javascript">
+
+        $('#my-selector').colorOnClick()
+
+    </code>
+
+</p>
+
+
+
+<p>
+
+    This is incredibly messy, and not sustainable for large and complex UIs, the
+
+    reasons for which will be listed below. The movement towards
+
+    <a href = "http://webcomponents.org/">web components</a> is a step in the
+
+    right direction, especially with
+
+    <a href = "https://www.polymer-project.org/1.0/">Polymer's</a> behaviors,
+
+    <a href = "https://angularjs.org/">Angular's</a> directives and all the
+
+    100's of other JavaScript frameworks being developed roughly by the rate by
+
+    which boot-camps shit out JavaScript developers.
+
+    <br/>
+
+    <em>Are there any viable alternatives?</em>
+
+</p>
+
+
+
+<p>
+
+    A honorable mention is the declarative alternative proposed by
+
+    <a href = "https://angularjs.org/">Googlers</a>:
+
+
+
+    <code class = "language html">
+
+        &lt;div colorOnClick class="my-class">&lt;/div>
+
+    </code>
+
+
+
+</p>
+
+
+
+
+
+<p>
+
+    And here's a declarative alternative using composition:
+
+    <code class = "language html">
+
+        &lt;div class="my-class"&gt;
+
+        &lt;colorOnClick&gt;&lt;/colorOnClick&gt;
+
+        &lt;/div&gt;
+
+    </code>
+
+    This is nothing new and has been
+
+    <a href = "https://en.wikipedia.org/wiki/Component-based_software_engineering">
+
+        used by Game Developers for ages</a>. Let's compare the two approaches and
+
+    see which one fails short. (Hint: It's the first one).
+
+</p>
+
+
+
+
+
+<h3>Binding Points</h3>
+
+
+
+<div class = "comparison">
+
+
+
+    <div>
+
+        <h4>Imperative</h4>
+
+        The imperative approach has <em>two binding points for each element</em>,
+
+        Firstly, each element's id must be known:
+
+        <code class = "language html">
+
+            &lt;!-- markup.html -->
+
+            &lt;div id="div1">&lt;/div>
+
+            &lt;div id="div2">&lt;/div>
+
+        </code>
+
+        Then the behavior is initialized in JavaScript:
+
+        <code class = "language javascript">
+
+            // javascript.js
+
+            colorOnClick(document.querySelector('#div1'))
+
+            colorOnClick(document.querySelector('#div2'))
+
+        </code>
+
+        Selecting with a class somewhat helps, but restricts the selection
+
+        to using the same parameters (plug-in options).
+
+    </div>
+
+
+
+
+
+    <div>
+
+        <h4>Declarative</h4>
+
+
+
+        The declarative approach has a <em>single binding point per instance</em>.
+
+        The behavior is nested
+
+        in the DOM element it defines. An example:
+
+
+
+        <code class = "language html">
+
+            &lt;!-- markup.html -->
+
+
+
+            &lt;!-- This div will be colored blue on click -->
+
+            &lt;div id="div1"&gt;
+
+            &lt;colorOnClick>&lt;/colorOnClick>
+
+            &lt;/div&gt;
+
+
+
+
+
+            &lt;!-- Another div which will be colored -->
+
+            &lt;div id="div2"&gt;
+
+            &lt;colorOnClick>&lt;/colorOnClick>
+
+            &lt;/div&gt;
+
+        </code>
+
+    </div>
+
+
+
+</div>
+
+Having a single binding point minimizes changes overhead and eases debugging.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Accessing the API</h3>
+
+
+
+<div class = "comparison">
+
+
+
+    <div>
+
+        <h4>Imperative</h4>
+
+        An uniform access pattern isn't statically enforced.
+
+        All developers find creative ways to access their plug-ins.
+
+        <code class = "language javascript">
+
+            //javascript.js
+
+
+
+            var element = document.querySelector('#div1')
+
+
+
+            // An example with jQuery's qtip.
+
+            var qtipAPI = $(element).qtip
+
+            // Accessing a behavior that plays a song
+
+            var songAPI = $(element).song().getSongControls()
+
+
+
+
+
+            qtipAPI('destroy') // destroy the qtip
+
+            songAPI.play() // play a song
+
+        </code>
+
+    </div>
+
+
+
+
+
+
+
+    <div>
+
+        <h4>Declarative</h4>
+
+        Accessing an interface of a behavior here is <em>uniform</em>
+
+        across all behaviors. It is also <em>semantic</em>,
+
+        as it uses the native access patterns.
+
+        <code class = "language javascript">
+
+            //javascript.js
+
+
+
+            var element = document.querySelector('#div1')
+
+
+
+            // Accessing a behavior that zooms the element
+
+            var zoomAPI = element.querySelector('zoomBehaviour')
+
+            // Accessing a behavior that plays a song
+
+            var songAPI = element.querySelector('songBehaviour')
+
+            // Accessing a native video element
+
+            var video   = element.querySelector("video")
+
+
+
+
+
+            zoomAPI.zoom() // zoom
+
+            songAPI.play() // play a song
+
+            video.play()   // play a video
+
+        </code>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Server side prerendering</h3>
+
+
+
+Imagine a situation, where you would like to serve users different versions /
+
+states of the UI.
+
+
+
+<div class = "comparison">
+
+    <div>
+
+        <h4>Imperative</h4>
+
+        When using an imperative approach, a prerendered state is cumbersome.
+
+        The templating engine needs to render JavaScript, which has poor templating
+
+        support ans is in general plain fugly.
+
+        <code class = "language javascript">
+
+            // prerendered js
+
+            // Using the {{ }} syntax for rendering server side variables
+
+            var element = ...
+
+
+
+            // Initialize the functionality with server-side rendered variables
+
+            myFunctionality({{param1}}, {{param2}}, {{param3}})
+
+        </code>
+
+    </div>
+
+
+
+    <div>
+
+        <h4>Declarative</h4>
+
+        Using a declarative aproach is consistent with rendering html.
+
+        <code class = "language html">
+
+            &lt;element>
+
+            &lt;my-functionality param1="{{param1}}" param2="{{param2}}">&lt;/my-functionality>
+
+            &lt;/element>
+
+        </code>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Communication: Events</h3>
+
+
+
+<div class = "comparison">
+
+
+
+    <div>
+
+        <h4>Imperative</h4>
+
+        Inter-functionality communication using the most common pattern: (events)
+
+        in a imperative UI involves firing an event on the host element.
+
+        <code class = "language javascript">
+
+            // .. somewhere from within a zooming function
+
+            element.dispatchEvent(new CustomEvent('zoomed'))
+
+
+
+            // somewhere someone subscribes.
+
+            elem.addEventListener('zoomed', ..)
+
+        </code>
+
+    </div>
+
+
+
+    <div>
+
+        <h4>Declarative</h4>
+
+        For better or for worse, the declarative approach gives the freedom to
+
+        to work with events, generated and contained within functionalities.
+
+        This is helpful if you need to tie an event to specific functionality.
+
+        <code class = "language javascript">
+
+            // .. somewhere from within a zooming behavior
+
+            behavior.dispatchEvent(new CustomEvent('zoomed'))
+
+
+
+            // .. somewhere from within another zooming behavior,
+
+            // which has the same parent element
+
+            behavior.dispatchEvent(new CustomEvent('zoomed'))
+
+
+
+            // .. someone somewhere listens only to the first behavior
+
+            document.querySelector('behaviour1').addEventListener('zoomed', ..)
+
+        </code>
+
+    </div>

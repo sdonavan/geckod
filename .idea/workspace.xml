@@ -1,16 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463c2ec7-fd37-447c-98f7-02a203d84012" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cfignore" afterPath="$PROJECT_DIR$/.cfignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/items/free-paas-providers-comparison/body.html" afterPath="$PROJECT_DIR$/backend/items/free-paas-providers-comparison/body.html" />
+    <list default="true" id="90e052cb-3997-4b92-a323-405a3ae34a9f" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\dictionaries\slytael.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\inspectionProfiles\Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\inspectionProfiles\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\libraries\geckod_3_0_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\.idea\runConfigurations\Build___Production.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\geckod.nedb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\import.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\items\article-declarative-behaviours\body.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\items\article-declarative-behaviours\metadata.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\items\free-paas-providers-comparison\body.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\items\free-paas-providers-comparison\metadata.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\model.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\commonUtilities.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\ensureIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\find.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\findOne.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\findWithIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\insert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\loadDatabase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\remove.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\benchmarks\update.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\browser-specific\lib\customUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\browser-specific\lib\storage.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\build.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\out\nedb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\out\nedb.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\mocha.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\mocha.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\nedb-browser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\testPersistence.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\testPersistence.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\testPersistence2.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\browser-version\test\testPersistence2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\cursor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\customUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\datastore.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\executor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\indexes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\model.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\persistence.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\lib\storage.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\async\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\async\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\async\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\async\lib\async.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\async\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\lib\avltree.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\lib\bst.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\lib\customUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\test\avltree.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\binary-search-tree\test\bst.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\examples\pow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\readme.markdown" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\chmod.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\clobber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\mkdirp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\perm.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\perm_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\race.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\rel.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\return.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\return_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\root.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\sync.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\umask.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\mkdirp\test\umask_sync.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\CNAME" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\underscore-min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\node_modules\underscore\underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\cursor.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\customUtil.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\db.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\executor.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\indexes.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\mocha.opts" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\model.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test\persistence.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\node_modules\nedb\test_lac\loadAndCrash.test.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\backend\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sly\Projects\geckod-3.0\server\server.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/particles/.bower.json" afterPath="$PROJECT_DIR$/ui/bower_components/particles/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/.bower.json" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/.bower.json" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/CustomElements.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/CustomElements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/CustomElements.min.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/CustomElements.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/HTMLImports.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/HTMLImports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/HTMLImports.min.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/HTMLImports.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/LICENSE.txt" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/MutationObserver.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/MutationObserver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/MutationObserver.min.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/MutationObserver.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/README.md" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/ShadowDOM.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/ShadowDOM.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/ShadowDOM.min.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/ShadowDOM.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/stream/api-router.js" afterPath="$PROJECT_DIR$/server/stream/api-router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/components/styles/background.html" afterPath="$PROJECT_DIR$/ui/components/styles/background.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/bower.json" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/bower.json" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/build.log" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/build.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/build.log" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/build.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config.js" afterPath="$PROJECT_DIR$/server/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/geckod.nedb" afterPath="$PROJECT_DIR$/backend/geckod.nedb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/behaviours/history-api.html" afterPath="$PROJECT_DIR$/ui/behaviours/history-api.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geckod-3.0.iml" afterPath="$PROJECT_DIR$/geckod-3.0.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/package.json" afterPath="$PROJECT_DIR$/server/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/package.json" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/polymer-micro.html" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/polymer-micro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/polymer-mini.html" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/polymer-mini.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/polymer/polymer.html" afterPath="$PROJECT_DIR$/ui/bower_components/polymer/polymer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/stream/redirect-router.js" afterPath="$PROJECT_DIR$/server/stream/redirect-router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/stream/render-router.js" afterPath="$PROJECT_DIR$/server/stream/render-router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/components/tile-article/styles-all.css" afterPath="$PROJECT_DIR$/ui/components/tile-article/styles-all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents-lite.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents-lite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents-lite.min.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents-lite.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents.min.js" afterPath="$PROJECT_DIR$/ui/bower_components/webcomponentsjs/webcomponents.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="geckod-3.0.iws" />
@@ -34,104 +171,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/config.js">
+      <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/backend/model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".cfignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.cfignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15679443">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="body.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/items/free-paas-providers-comparison/body.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+              <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#td#1;n#tr#5;n#table#0;n#!!top" expanded="true" />
+                <element signature="e#0#39#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history-api.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/behaviours/history-api.html">
+      <file leaf-file-name="import.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/backend/import.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tile-article.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/components/tile-article/tile-article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="14" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
+        <entry file="file://$PROJECT_DIR$/server/stream/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/package.json">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/components/application-menu/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/components/styles/background.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3846154">
+              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles-all.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/components/tile-article/styles-all.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42372882">
+              <caret line="208" column="23" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -139,47 +235,41 @@
       </file>
     </leaf>
   </component>
-  <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Sly" />
+        <option value="Html5" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ui/index.html" root0="SKIP_HIGHLIGHTING" />
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/ui/components/particle-system/component.js" />
-        <option value="$PROJECT_DIR$/ui/components/particle-system/particle-system.html" />
-        <option value="$PROJECT_DIR$/ui/behaviours/decompose-element.html" />
-        <option value="$PROJECT_DIR$/ui/components/application-menu/application-menu.html" />
-        <option value="$PROJECT_DIR$/backend/model.js" />
-        <option value="$PROJECT_DIR$/backend/geckod.nedb" />
-        <option value="$PROJECT_DIR$/backend/import.js" />
-        <option value="$PROJECT_DIR$/ui/components/tile-article/component.js" />
-        <option value="$PROJECT_DIR$/ui/components/tile-article/styles-project.css" />
-        <option value="$PROJECT_DIR$/ui/components/tile-article/styles-article.css" />
-        <option value="$PROJECT_DIR$/ui/behaviours/parallax.html" />
-        <option value="$PROJECT_DIR$/backend/items/article-declarative-behaviours/body.html" />
-        <option value="$PROJECT_DIR$/ui/components/tile-article/styles-body.css" />
-        <option value="$PROJECT_DIR$/manifest.yml" />
-        <option value="$PROJECT_DIR$/ui/components/styles/gallery.html" />
-        <option value="$PROJECT_DIR$/ui/components/styles/variables.html" />
-        <option value="$PROJECT_DIR$/ui/components/tile-article/styles-all.css" />
-        <option value="$PROJECT_DIR$/ui/behaviours/router.html" />
-        <option value="$PROJECT_DIR$/ui/components/tile-article/tile-article.html" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/backend/items/free-paas-providers-comparison/body.html" />
-        <option value="$PROJECT_DIR$/ui/index.html" />
-        <option value="$PROJECT_DIR$/ui/behaviours/history-api.html" />
+        <option value="$PROJECT_DIR$/server/backend/items/memories/body.html" />
+        <option value="$PROJECT_DIR$/server/backend/items/memories/metadata.js" />
+        <option value="$PROJECT_DIR$/server/backend/items/free-paas-providers-comparison/body.html" />
+        <option value="$PROJECT_DIR$/server/backend/items/free-paas-providers-comparison/metadata.js" />
+        <option value="$PROJECT_DIR$/server/backend/items/decl/body.html" />
+        <option value="$PROJECT_DIR$/server/backend/items/decl/metadata.js" />
+        <option value="$PROJECT_DIR$/server/backend/model.js" />
+        <option value="$PROJECT_DIR$/server/backend/import.js" />
         <option value="$PROJECT_DIR$/server/config.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/.cfignore" />
+        <option value="$PROJECT_DIR$/server/stream/api-router.js" />
+        <option value="$PROJECT_DIR$/server/package.json.js" />
+        <option value="$PROJECT_DIR$/server/stream/redirect-router.js" />
+        <option value="$PROJECT_DIR$/server/stream/render-router.js" />
+        <option value="$PROJECT_DIR$/server/stream/server.js" />
+        <option value="$PROJECT_DIR$/ui/components/styles/background.html" />
+        <option value="$PROJECT_DIR$/ui/components/tile-article/styles-all.css" />
       </list>
     </option>
   </component>
@@ -193,34 +283,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="width" value="1927" />
-    <option name="height" value="1046" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Code style issuesJavaScript</id>
-          </State>
-          <State>
-            <id>HTML</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>ConstantOnRHSOfComparisonJS</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1618" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -246,6 +312,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,51 +331,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geckod-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geckod-3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="161" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="202" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="205" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1322" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="201" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="205" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1329" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="js.buildTools.grunt.node_interpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="js.buildTools.grunt.grunt-cli.package" value="C:\Users\slytael\AppData\Roaming\npm\node_modules\grunt-cli" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\slytael\Projects\geckod-3.0\ui\components" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Node.js.Server - Test">
+  <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -319,6 +412,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -332,14 +426,127 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -350,11 +557,38 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
-      <pass-parent-env-vars value="true" />
-      <force value="false" />
-      <verbose value="false" />
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -366,61 +600,86 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Server - Test" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server/server.js" working-dir="$PROJECT_DIR$">
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
-    <configuration default="false" name="Server - Production" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server/server.js" working-dir="$PROJECT_DIR$">
-      <method>
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build - Production" run_configuration_type="js.build_tools.grunt" />
-      </method>
-    </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Grunt.js.Build - Production" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.Server - Test" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.Server - Production" />
-    </list>
-    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90e052cb-3997-4b92-a323-405a3ae34a9f" name="Default" comment="" />
+      <created>1443197786973</created>
+      <option name="number" value="Default" />
+      <updated>1443197786973</updated>
+      <workItem from="1443197790206" duration="2661000" />
+      <workItem from="1443201197775" duration="934000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3595000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="0" width="1927" height="1046" extended-state="0" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1618" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934928" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19222222" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25144356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.299375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934928" sideWeight="0.4975" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34333333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496382" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -433,360 +692,29 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added a new article" />
-    <MESSAGE value="Fixed a lot of effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a lot of effects" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui/components/particle-system/particle-system.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/background.html">
+    <entry file="file://$PROJECT_DIR$/server/backend/model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/app-wide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2109375">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/application-menu/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/behaviours/autotype.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.75">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/behaviours/decompose-element.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/tile-article/styles-project.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/application-menu/application-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/application-menu/application-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/application-menu/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/application-menu/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geckod-3.0.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/styles/styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/tile-article/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="68" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/tile-article/styles-all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/tile-article/styles-article.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/tile-article/styles-body.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/components/tile-article/tile-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/stream/redirect-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/stream/render-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/stream/api-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/import.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/tile-article/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/reset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/home-styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/items/article-declarative-behaviours/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0789473">
-          <caret line="103" column="3" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/items/free-paas-providers-comparison/metadata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8421052">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/variables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.638889">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/tile-article/styles-body.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/behaviours/parallax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.13889">
-          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/bower_components/particles/particles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/tile-article/styles-all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.625">
-          <caret line="176" column="47" selection-start-line="176" selection-start-column="47" selection-end-line="176" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/styles/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="45" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/behaviours/router.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/components/tile-article/tile-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/items/free-paas-providers-comparison/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#td#1;n#tr#2;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#td#1;n#tr#5;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/index.html">
+    <entry file="file://$PROJECT_DIR$/server/backend/import.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/behaviours/history-api.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -794,114 +722,182 @@
     <entry file="file://$PROJECT_DIR$/server/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/stream/api-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="14" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.cfignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15679443">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>geckod-3.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>geckod-3.0 node_modules</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/server/backend/items/memories/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/items/memories/metadata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/items/free-paas-providers-comparison/metadata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34652278">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/items/decl/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9579208">
+          <caret line="481" column="0" selection-start-line="481" selection-start-column="0" selection-end-line="481" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/items/decl/metadata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34652278">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/items/free-paas-providers-comparison/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9579208">
+          <caret line="622" column="4" selection-start-line="622" selection-start-column="4" selection-end-line="622" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/stream/api-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/stream/redirect-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/stream/render-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/backend/import.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/stream/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/components/application-menu/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/components/styles/background.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3846154">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/components/tile-article/styles-all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42372882">
+          <caret line="208" column="23" selection-start-line="208" selection-start-column="23" selection-end-line="208" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

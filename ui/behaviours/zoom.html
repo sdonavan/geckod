@@ -23,11 +23,8 @@
             var instance = this
             target.addEventListener(this._transitionEndEventName(), function(e)
             {
-                if (e.srcElement == target)
-                {
-                    target.removeEventListener(e.type, arguments.callee, false)
-                    instance._clearMetricsFromStyle(target)
-                }
+                target.removeEventListener(e.type, arguments.callee, false)
+                instance._clearMetricsFromStyle(target)
             }, false)
 
             instance.zoomed = false
@@ -53,12 +50,6 @@
 
             // Setup work
             this.zoomed = true
-
-            target.addEventListener(this._transitionEndEventName(), function(e)
-            {
-                window.dispatchEvent(new CustomEvent('resize'))
-                target.removeEventListener(e.type, arguments.callee, false)
-            }, false)
         },
 
         _saveMetricsFromClass: function(target)

@@ -1,9 +1,0 @@
-{
-  "name": "Geckod",
-  "version": "3.0.0",
-  "description": "A sample nodejs app for Bluemix",
-  "dependencies": {
-    "nedb": "^1.1.3"
-  },
-  "repository": {}
-}

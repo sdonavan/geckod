@@ -129,7 +129,10 @@
 
             {s% for item in items %s}
 
-                <tile-article class = "{s{ item.type }s}" link = "{s{ item._id }s}">
+                <tile-article
+                    class = "{s{ item.type }s}"
+                    link = "{s{ item._id }s}"
+                    cover = "{s{ item.thumbnail }s}">
 
                     <h2>
                         <effect-decomposer base-delay = "1.2"></effect-decomposer>
@@ -146,8 +149,6 @@
                             <span>{s{ tag }s}</span>
                         {s% endfor %s}
                     </tags>
-
-                    <img src = "{s{ item.thumbnail }s}"></img>
 
                     <main>{s% if item.prerender %s} {s{item.main}s} {s% endif %s}</main>
                 </tile-article>

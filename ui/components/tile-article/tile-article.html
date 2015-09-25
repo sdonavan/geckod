@@ -39,15 +39,16 @@
                         </behaviour-router>
                     </behaviour-parallax>
 
-                    <content select="img"></content><behaviour-parallax scroller = ".container" bind-to = "sibling" distance = '0.1'>
-                        <behaviour-router
-                                page="{{realLink}}"
-                                active="on"
-                                active-delay
-                                inactive="off">
-                        </behaviour-router>
-                    </behaviour-parallax>
-
+                    <div class = "cover">
+                        <behaviour-parallax scroller = ".container" distance = '0.1'>
+                            <behaviour-router
+                                    page="{{realLink}}"
+                                    active="on"
+                                    active-delay
+                                    inactive="off">
+                            </behaviour-router>
+                        </behaviour-parallax>
+                    </div>
 
                     <div class = "metadata">
 

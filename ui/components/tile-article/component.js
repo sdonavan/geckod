@@ -3,7 +3,7 @@ Polymer
 
     is: "tile-article",
 
-    properties: {link: String},
+    properties: {link: String, cover: String},
 
     ready: function()
     {
@@ -14,6 +14,11 @@ Polymer
     attached: function()
     {
         this.highlight()
+
+        console.log(this.cover)
+
+        // Set the background
+        this.querySelector('.cover').style['background-image'] = 'url("' + this.cover + '")'
     },
 
     loadBody: function(event)

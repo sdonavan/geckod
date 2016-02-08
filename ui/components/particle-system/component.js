@@ -19,9 +19,6 @@
 
         this.script = null
         this.setAttribute('id', id)
-
-        // When the parent is resized with transition,
-        // trigger the width
     },
 
     _generateId: function()

@@ -20,7 +20,7 @@
 
     <template>
 
-        <iron-ajax auto url = "{{apiLink}}" handle-as="json" on-response = "loadBody">
+        <iron-ajax auto url = "{{apiLink}}" handle-as="json">
         </iron-ajax>
 
         <div class = "container">
@@ -33,7 +33,7 @@
                 </behaviour-router>
             </behaviour-zoom>
 
-            <a href = "{{realLink}}">
+            <a href = "{{realLink}}" on-click = "loadBody">
                 <header id = "main-header">
 
                     <behaviour-parallax distance = '0.8' scroller = ".container">

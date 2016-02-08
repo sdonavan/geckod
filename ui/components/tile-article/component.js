@@ -15,8 +15,6 @@ Polymer
     {
         this.highlight()
 
-        console.log(this.cover)
-
         // Set the background
         this.querySelector('.cover').style['background-image'] = 'url("' + this.cover + '")'
     },

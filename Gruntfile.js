@@ -62,12 +62,53 @@ module.exports = function(grunt)
                     dest: 'build/'
                 }]
             }
+        },
+
+        compress:
+        {
+            main:
+            {
+            options:
+            {
+                mode: 'gzip'
+            },
+                expand: true,
+                cwd: 'ui/',
+                src: ['index.html'],
+                dest: 'build/'
+            }
         }
     })
 
     grunt.task.registerTask('redeployDatabase', "Redeploy the database", function()
     {
-        require('./backend/import')
+        require('./server/backend/import')
+    })
+
+
+    grunt.task.registerTask('vulcanizeIndex', 'Vulcanize index', function(arg1, arg2)
+    {
+        var done = this.async()
+
+        var indexVulcan = new Vulcanize(
+        {
+            inlineScripts: true,
+            inlineCss: true,
+            implicitStrip: true,
+            stripComments: false,
+            //excludes: [new RegExp('\/bower_components\/')]
+        })
+
+        var fileName = __dirname + '/build/' + 'index.html'
+        indexVulcan.process(fileName, function(err, inlinedHtml)
+        {
+            console.log("Vulcanizing index")
+            fs.writeFile(fileName, inlinedHtml, function(err)
+            {
+                console.log(err)
+                done()
+            })
+        })
     })
 
     grunt.task.registerTask('vulcanizer', 'A sample task that logs stuff.', function(arg1, arg2)
@@ -113,6 +154,11 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-contrib-uglify')
 
     // Default task(s).
-    grunt.registerTask('default', ['redeployDatabase', 'copy', 'minifyPolymer', 'minifyPolymerCSS', 'uglify', 'vulcanizer'])
+    grunt.registerTask('default', ['redeployDatabase',
+                                   'copy',
+                                   'minifyPolymer',
+                                   'minifyPolymerCSS',
+                                   'uglify',
+                                   'vulcanizeIndex'])
 
 }

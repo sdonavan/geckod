@@ -36,7 +36,10 @@
     on: function()
     {
         if (this.script !== null)
+        {
+            console.warn("Attempting to turn a particle system, that's already on!")
             return
+        }
 
         this.script = new particlesJS(this.id,
             {

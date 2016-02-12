@@ -22,7 +22,7 @@ var renderRouter = require('./render-router')
 var apiRouter    = require('./api-router')
 
 
-//app.use(compress({level: 1}))        // Use Gzip compression
+app.use(compress({level: 9}))        // Use Gzip compression
 app.use('', redirectRouter)          // Redirect www to canonial
 app.use('/', renderRouter)           // Try to find a static site
 app.use('/api/', apiRouter)

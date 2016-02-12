@@ -53,10 +53,13 @@
 
                 this._on = true
 
-                this.parallaxAnimation = function()
+                this.parallaxAnimation = () =>
                 {
-                    window.requestAnimationFrame(this._parallax.bind(this))
-                }.bind(this)
+                    //window.requestAnimationFrame(() =>
+                    //{
+                        this.element.style.transform = 'translateY(' + this.scrollTarget.scrollTop * this.distance + 'px)'
+                    //})
+                }
 
                 this.scrollTarget.addEventListener("scroll", this.parallaxAnimation, false)
             },
@@ -73,14 +76,6 @@
                 this.element.style.transform = ''
                 this.scrollTarget.removeEventListener("scroll", this.parallaxAnimation)
                 this.parallaxAnimation = null
-            },
-
-            _parallax: function(event)
-            {
-                if (this._on === false)
-                    console.warn("Warning in Parallax. Running aprallax althought it is turned off!")
-
-                this.element.style.transform = 'translateY(' + this.scrollTarget.scrollTop * this.distance + 'px)'
             }
         })
 

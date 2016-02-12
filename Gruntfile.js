@@ -62,21 +62,6 @@ module.exports = function(grunt)
                     dest: 'build/'
                 }]
             }
-        },
-
-        compress:
-        {
-            main:
-            {
-            options:
-            {
-                mode: 'gzip'
-            },
-                expand: true,
-                cwd: 'ui/',
-                src: ['index.html'],
-                dest: 'build/'
-            }
         }
     })
 
@@ -96,14 +81,16 @@ module.exports = function(grunt)
             inlineCss: true,
             implicitStrip: true,
             stripComments: false,
+            abspath: __dirname + '/build/'
             //excludes: [new RegExp('\/bower_components\/')]
         })
 
-        var fileName = __dirname + '/build/' + 'index.html'
+        var fileName = 'index.html'
+
         indexVulcan.process(fileName, function(err, inlinedHtml)
         {
             console.log("Vulcanizing index")
-            fs.writeFile(fileName, inlinedHtml, function(err)
+            fs.writeFile(__dirname + '/build/' + fileName, inlinedHtml, function(err)
             {
                 console.log(err)
                 done()
@@ -156,9 +143,9 @@ module.exports = function(grunt)
     // Default task(s).
     grunt.registerTask('default', ['redeployDatabase',
                                    'copy',
+                                   'uglify',
                                    'minifyPolymer',
                                    'minifyPolymerCSS',
-                                   'uglify',
                                    'vulcanizeIndex'])
 
 }

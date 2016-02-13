@@ -16,15 +16,15 @@
             var letters = text.split('')
 
             parent.innerHTML = ''
-            letters.map(function(letter, index)
+            letters.map((letter, index) =>
             {
                 var letterSpan = document.createElement("SPAN")
                 var delayWeight = this.ordered ? index / 80 : Math.random() / 2
 
-                letterSpan.innerHTML = letter
+                letterSpan.innerHTML = letter //=== ' ' ? '&nbsp' : letter
                 letterSpan.style['transition-delay'] = (this.baseDelay + delayWeight) + 's'
                 parent.appendChild(letterSpan)
-            }.bind(this))
+            })
         }
     })
 </script>

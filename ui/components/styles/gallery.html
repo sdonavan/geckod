@@ -3,12 +3,13 @@
     {
         position: absolute;
         width: 100vw;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
         transition: all var(--app-transition-navigation);
+        font-size:0;
+    }
+
+    #gallery > *
+    {
+        font-size: 1rem;
     }
 
     #gallery.inactive-page
@@ -22,15 +23,14 @@
         transform: translate(100%);
     }
 
-
-
-
-
     #gallery ::content header h2 > span
     {
         opacity: 1;
         transform: rotatex(0) translatey(0);
         transition: all var(--app-transition-accessories);
+
+        display: inline-block;
+        white-space: pre;
     }
 
     #gallery.slide-out ::content header h2 > span

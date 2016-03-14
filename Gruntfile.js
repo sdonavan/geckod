@@ -36,30 +36,17 @@ module.exports = function(grunt)
             }
         },
 
-        minifyPolymer:
-        {
-            default:
-            {
-                files:
-                [{
-                    expand: true,
-                    cwd: 'ui/',
-                    src: ['**/*.html'],
-                    dest: 'build/'
-                }]
-            }
-        },
 
-        minifyPolymerCSS:
+        cssmin:
         {
-            default:
+            target:
             {
                 files:
                 [{
                     expand: true,
-                    cwd: 'ui/',
-                    src: ['**/*.css'],
-                    dest: 'build/'
+                    cwd: 'ui',
+                    src: '*.css',
+                    dest: 'build'
                 }]
             }
         }

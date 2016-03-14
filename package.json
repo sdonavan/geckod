@@ -5,9 +5,7 @@
   "dependencies": {
     "grunt": "*",
     "grunt-contrib-copy": "*",
-    "grunt-minify-polymer": "*",
-    "grunt-contrib-uglify": "*",
-    "vulcanize": "git://github.com/Polymer/vulcanize.git#v1.10.2"
+    "grunt-contrib-cssmin": "*"
   },
   "repository": {}
 }

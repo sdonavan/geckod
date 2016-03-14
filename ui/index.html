@@ -6,159 +6,88 @@
     <head>
         <title> Geckod: Design &#38; Technology </title>
 
-        <!-- Polymer -->
-        <script src = "/bower_components/webcomponentsjs/webcomponents.min.js"></script>
-        <link rel = "import" href = "/bower_components/polymer/polymer.html" />
+        <link rel = "stylesheet" href = "/styles.css"></link>
 
-        <!-- All behaviours -->
-        <link rel = "import" href = "/behaviours/parallax.html" />
-        <link rel = "import" href = "/behaviours/zoom.html" />
-        <link rel = "import" href = "/behaviours/decompose-element.html" />
-        <link rel = "import" href = "/behaviours/autotype.html" />
-        <link rel = "import" href = "/behaviours/history-api.html" />
-        <link rel = "import" href = "/behaviours/router.html" />
-
-        <!-- All components -->
-        <link rel = "import" href = "/components/styles/styles.html" />
-        <link rel = "import" href = "/components/particle-system/particle-system.html" />
-        <link rel = "import" href = "/components/tile-article/tile-article.html" />
-        <link rel = "import" href = "/components/application-menu/application-menu.html" />
     </head>
 
     <body style = "opacity: 0; transition: all 0.6s;">
 
-        <behaviour-history-api></behaviour-history-api>
+        <history-api :path.sync="path"></history-api>
+
+        <a class = "menu" :href = "menuPath">
+            <span class = "gallery">
+                <i class = "icon"></i>
+            </span>
+        </a>
 
         <section id = "background">
-            <video id = "main" autoplay = "autoplay" loop = "true">
-
-                <behaviour-router
-                    page = "/"
-                    active = "play"
-                    inactive = "pause"
-                    inactive-delay
-                    hide-class = "slide-out">
-                </behaviour-router>
-
+            <video id = "main" autoplay = "autoplay" loop = "true" v-show = "path == '/'" transition = "hparallax">
                 <source src = "/videos/background.mp4" type="video/mp4">
                 <source src = "/videos/background.webm" type="video/webm">
             </video>
 
-            <video id = "background-filler">
+            <video id = "background-filler" v-show = "path == '/'" transition = "hparallax">
                 <source src = "/videos/smaller.mp4" type="video/mp4">
                 <source src = "/videos/smaller.webm" type="video/webm">
             </video>
-
-            <particle-system class = "big" number = "8" size = "80" speed = "1.1" color = "#62549C" opacity = "0.07">
-                <behaviour-router
-                    page = "/"
-                    active = "on"
-                    inactive = "off"
-                    inactive-delay
-                    hide-class = "slide-out" />
-                </behaviour-router>
-            </particle-system>
-
-            <particle-system class = "big" number = "20" size = "20" speed = "1.4" color = "#9874A6" opacity = "0.2">
-                <behaviour-router
-                    page = "/"
-                    active = "on"
-                    inactive = "off"
-                    inactive-delay
-                    hide-class = "slide-out" />
-                </behaviour-router>
-            </particle-system>
-
-            <particle-system class = "small" number = "30" size = "3" speed = "2" color = "#ded0b7" opacity = "0.6">
-                <behaviour-router
-                    page = "/"
-                    active = "on"
-                    inactive = "off"
-                    inactive-delay
-                    hide-class = "slide-out" />
-                </behaviour-router>
-            </particle-system>
-
-            <particle-system class = "small" number = "20" size = "1" speed = "3" color = "#ded0b7" opacity = "0.8">
-                <behaviour-router
-                    page = "/"
-                    active = "on"
-                    inactive = "off"
-                    inactive-delay
-                    hide-class = "slide-out" />
-                </behaviour-router>
-            </particle-system>
         </section>
 
-        <section id = "home">
-
-            <behaviour-router
-                page="/"
-                hide-class = "slide-out">
-            </behaviour-router>
-
+        <section id = "home" v-show = "path == '/'" transition = "hparallax">
             <h1>
-
                 <span>Hey, I'm Slavin</span>
                 <span>I live around Europe</span>
                 <span>I am a digital engineer</span>
-                <span>I love&nbsp;
-                    <effect-autotype>
+                <span>
+                    <span>I love&nbsp;
+                    <span is = "typewritter">
                         <span>Motion Graphics</span>
                         <span>Material Design</span>
                         <span>Functional Programming</span>
                         <span>Parallel Computing</span>
-                    </effect-autotype>
+                    </span>
                 </span>
             </h1>
         </section>
 
-        <section id = "gallery" class = "slide-out">
-
-            <behaviour-router
-                page = "/articles/.*"
-                hide-class = "slide-out"
-                active-class = "show-text">
-            </behaviour-router>
-
-            <behaviour-router
-                page = "/articles/"
-                hide-class = "inactive-page">
-            </behaviour-router>
-
+        <section id = "gallery" v-show = "path == '/articles'" transition = "hparallax">
             {s% for item in items %s}
 
-                <tile-article
-                    class = "{s{ item.type }s}"
-                    link = "{s{ item._id }s}"
-                    cover = "{s{ item.thumbnail }s}">
+            <article>
+                <a href = "{{realLink}}">
+                    <header id = "main-header">
 
-                    <h2>
-                        <effect-decomposer base-delay = "1.2"></effect-decomposer>
-                        {s{ item.title }s}
-                    </h2>
+                        <div class = "cover" style = "background-image: url({s{ item.thumbnail }s});">
+                        </div>
 
-                    <time>
-                        <effect-decomposer base-delay = "0"></effect-decomposer>
-                        {s{ item.date }s}
-                    </time>
+                        <div class = "metadata">
 
-                    <tags>
-                        {s% for tag in item.tags %s}
-                            <span>{s{ tag }s}</span>
-                        {s% endfor %s}
-                    </tags>
+                            <div class = "tags" v-show = "path == '/articles'" transition = "after-hparallax">
+                                {s% for tag in item.tags %s}
+                                    <span>{s{ tag }s}</span>
+                                {s% endfor %s}
+                            </div>
 
-                    <main>{s% if item.prerender %s} {s{item.main}s} {s% endif %s}</main>
-                </tile-article>
+                            <h2 v-decomposed = "{baseDelay: 1.2, ordered: false}" v-show = "path == '/articles'" transition = "after-hparallax">
+                                {s{ item.title }s}
+                            </h2>
 
+                            <div class = "line"></div>
+
+                            <time v-decomposed = "{baseDelay: 0, ordered: false}">{s{ item.date }s}</time>
+                        </div>
+                    </header>
+                </a>
+            </article>
             {s% endfor %s}
 
         </section>
 
-        <application-menu></application-menu>
-
     </body>
+
+    <!-- GUI Framework -->
+    <script src = "http://cdn.jsdelivr.net/vue/1.0.17/vue.min.js"></script>
+
+    <script src = "/application.js"></script>
 
     <script>
         // Display the body

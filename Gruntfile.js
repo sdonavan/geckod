@@ -54,85 +54,28 @@ module.exports = function(grunt)
 
     grunt.task.registerTask('redeployDatabase', "Redeploy the database", function()
     {
-        require('./server/backend/import')
-    })
+        var done = this.async();
 
-
-    grunt.task.registerTask('vulcanizeIndex', 'Vulcanize index', function(arg1, arg2)
-    {
-        var done = this.async()
-
-        var indexVulcan = new Vulcanize(
+        try
         {
-            inlineScripts: true,
-            inlineCss: true,
-            implicitStrip: true,
-            stripComments: false,
-            abspath: __dirname + '/build/'
-            //excludes: [new RegExp('\/bower_components\/')]
-        })
-
-        var fileName = 'index.html'
-
-        indexVulcan.process(fileName, function(err, inlinedHtml)
-        {
-            console.log("Vulcanizing index")
-            fs.writeFile(__dirname + '/build/' + fileName, inlinedHtml, function(err)
-            {
-                console.log(err)
-                done()
-            })
-        })
-    })
-
-    grunt.task.registerTask('vulcanizer', 'A sample task that logs stuff.', function(arg1, arg2)
-    {
-        var done = this.async()
-
-        function getDirectories(srcpath)
-        {
-          return fs.readdirSync(srcpath).filter(function(file) {
-            return fs.statSync(path.join(srcpath, file)).isDirectory();
-          })
+            var updateDatabase = require('./server/backend/import')
+            updateDatabase(done)
         }
-
-
-        var components = getDirectories(__dirname + '/build/components/')
-
-        components.forEach(function(dir)
+        catch (e)
         {
-            var vulcan = new Vulcanize(
-            {
-                inlineScripts: true,
-                inlineCss: true,
-                implicitStrip: true,
-                stripComments: false,
-                excludes: [new RegExp('\/bower_components\/')]
-            })
-
-            var fileName = __dirname + '/build/components/' + dir + '/' + dir + '.html'
-
-            vulcan.process(fileName, function(err, inlinedHtml)
-            {
-                fs.writeFile(fileName, inlinedHtml, function(err)
-                {
-
-                })
-            })
-        })
+            console.log(e)
+        }
     })
+
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-copy')
-    grunt.loadNpmTasks('grunt-minify-polymer')
+    grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
 
     // Default task(s).
     grunt.registerTask('default', ['redeployDatabase',
                                    'copy',
-                                   'uglify',
-                                   'minifyPolymer',
-                                   'minifyPolymerCSS',
-                                   'vulcanizeIndex'])
+                                   'cssmin'])
 
 }

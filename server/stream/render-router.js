@@ -5,7 +5,7 @@ var moment          = require('moment') // For date parsing
 
 
 var StaticRouter = express.Router()
-StaticRouter.get(['/', '/articles', '/articles/:id'], function(req, res)
+StaticRouter.get(['/', '/articles'], function(req, res)
 {
     config.model.getAllItems(function(items)
     {
@@ -13,16 +13,34 @@ StaticRouter.get(['/', '/articles', '/articles/:id'], function(req, res)
         {
             if (item['date'])
                 item['date'] = moment(item['date']).format('MMMM Do YYYY')
-
-            // If the current article is being requested
-            if (req.params.id === item['_id'])
-                item['prerender'] = true
         })
 
         res.render( 'index', {items: items}, function(error, content)
         {
             res.send(content)
         })
+    })
+})
+
+StaticRouter.get(['/articles/:id'], function(req, res)
+{
+    config.model.getArticle(req.params.id, function(items)
+    {
+        var article = items[0]
+
+        if (article === undefined)
+            res.status(404).send('Not found')
+
+        else
+        {
+            if (article['date'])
+                article['date'] = moment(article['date']).format('MMMM Do YYYY')
+
+            res.render( 'article', {item: article}, function(error, content)
+            {
+                res.send(content)
+            })
+        }
     })
 })
 

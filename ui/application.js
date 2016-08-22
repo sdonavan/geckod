@@ -102,55 +102,63 @@ Vue.directive('decomposed',
 })
 
 
-Vue.component('history-api',
+Vue.directive('internal',
 {
-    props: ['path'],
-
-    activate: function(done)
+    update: function(value)
     {
-        console.info("History API element created. Routes are rerouted automatically")
-
-        Array.from(document.querySelectorAll('a')).forEach( a =>
+        this.el.addEventListener('click', e =>
         {
-            a.addEventListener('click', e =>
-            {
-                // If the link is iternal, block it
-                // and do history API magic
-                if (a.host === window.location.host)
-                {
-                    e.preventDefault()
+            // If the link is iternal, block it
+            // and do history API magic
+            e.preventDefault()
 
-                    // Get human friendly link if it's there
-                    var refference = a.getAttribute('href')
+            // Get human friendly link if it's there
+            var refference = this.el.getAttribute('href')
 
-                    // If already on this page, scip
-                    if (window.location.pathname === refference)
-                        return
+            // If already on this page, scip
+            if (window.location.pathname === refference)
+                return
 
-                    history.pushState('', '', refference)
+            history.pushState('', '', refference)
 
-                    this.path = refference
-                }
-            })
+            this.set(refference)
+            value = refference
         })
+    },
 
-        window.onpopstate = (e) => this.path = window.location.pathname
-
-        done()
-    }
+    twoWay: true
 })
 
+
+Vue.directive('ddawwd',
+{
+    update: function(value)
+    {
+    },
+
+    twoWay: true
+})
 
 var Application = new Vue(
 {
     el: 'body',
 
-    data: {'path': window.location.pathname},
+    data:
+    {
+        'path': window.location.pathname,
+        'pageLoaded': false
+    },
 
     computed:
     {
         'menuPath': self => (self.path == '/') ? '/articles' :
                             (self.path == '/articles') ? '/' :
                             '/articles'
+    },
+
+    created: function()
+    {
+        window.onpopstate = e => {console.log("Cccc"); this.path = window.location.pathname;}
+        window.onload = e => this.pageLoaded = true
     }
 })

@@ -1,0 +1,60 @@
+{s% extends 'index.html' %s}
+
+
+{s%  block menu %s}
+<a class = "menu" :href = "menuPath">
+    <span class = "gallery">
+        <i class = "icon"></i>
+    </span>
+</a>
+{s% endblock %s}
+
+
+{s% block content %s}
+<section id = "article">
+
+    <article>
+        <header id = "main-header">
+
+            <div class = "cover" style = "background-image: url({s{ item.thumbnail }s});">
+            </div>
+
+            <div class = "metadata">
+
+                <div class = "tags" v-show = "pageLoaded === true" transition = "after-hparallax">
+                    {s% for tag in item.tags %s}
+                        <span>{s{ tag }s}</span>
+                    {s% endfor %s}
+                </div>
+
+                <h2 v-decomposed = "{baseDelay: 1.2, ordered: false}" v-show = "pageLoaded === true" transition = "after-hparallax">
+                    {s{ item.title }s}
+                </h2>
+
+                <div class = "line"></div>
+
+                <time v-decomposed = "{baseDelay: 0, ordered: false}">{s{ item.date }s}</time>
+
+            </div>
+        </header>
+
+        <content>
+            {s{ item.main }s}
+        </content>
+
+    </article>
+</section>
+
+<!-- Highlight -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/mono-blue.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script>
+Array.from(document.querySelectorAll('code')).forEach(hljs.highlightBlock)
+</script>
+
+<!-- Font awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- Google -->
+<link href="http://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+{s% endblock %s}

@@ -1,6 +1,6 @@
 var config =
 {
-    staticFolder: __dirname + '/../build/',
+    staticFolder: __dirname + '/../ui/',
     database    : __dirname + '/backend/geckod.nedb',
     model       : require('./backend/model')
 }

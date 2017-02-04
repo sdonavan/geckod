@@ -11,84 +11,76 @@
     </head>
 
     <body style = "opacity: 0; transition: all 0.6s;">
-
-        {s%  block menu %s}
-        <a class = "menu" :href = "menuPath" v-internal = "path">
-            <span class = "gallery">
-                <i class = "icon"></i>
-            </span>
-        </a>
-        {s% endblock %s}
-        
-        {s%  block content %s}
-        <section id = "background">
-            <video id = "main" autoplay = "autoplay" loop = "true" v-show = "path == '/'" transition = "hparallax">
-                <source src = "/videos/background.mp4" type="video/mp4">
-                <source src = "/videos/background.webm" type="video/webm">
-            </video>
-
-            <video id = "background-filler" v-show = "path == '/'" transition = "hparallax">
-                <source src = "/videos/smaller.mp4" type="video/mp4">
-                <source src = "/videos/smaller.webm" type="video/webm">
-            </video>
-        </section>
-
-        <section id = "home" v-show = "path == '/'" transition = "hparallax">
-            <h1>
-                <span>Hey, I'm Slavin</span>
-                <span>I live around Europe</span>
-                <span>I am a digital engineer</span>
-                <span>
-                    <span>I love&nbsp;
-                    <span is = "typewritter">
-                        <span>Motion Graphics</span>
-                        <span>Material Design</span>
-                        <span>Functional Programming</span>
-                        <span>Parallel Computing</span>
-                    </span>
+        <div id = "content">
+            <a class = "menu" :href = "menuPath" v-internal = "path">
+                <span class = "gallery">
+                    <i class = "icon"></i>
                 </span>
-            </h1>
-        </section>
+            </a>
 
-        <section id = "gallery" v-show = "path == '/articles'" transition = "hparallax">
-            {s% for item in items %s}
+            <section id = "background" :class="{ 'active': path == '/', 'inactive': path != '/', 'hparallax': true}">
+                <video id = "main" autoplay = "autoplay" loop = "true" >
+                    <source src = "/videos/background.mp4" type="video/mp4">
+                    <source src = "/videos/background.webm" type="video/webm">
+                </video>
 
-            <article class = "thumbnail">
-                <a href = "/articles/{s{item._id}s}">
-                    <header id = "main-header">
+                <video id = "background-filler">
+                    <source src = "/videos/smaller.mp4" type="video/mp4">
+                    <source src = "/videos/smaller.webm" type="video/webm">
+                </video>
+            </section>
 
-                        <div class = "cover" style = "background-image: url({s{ item.thumbnail }s});">
-                        </div>
+            <section id = "home" :class="{ 'active': path == '/', 'inactive': path != '/', 'hparallax': true}">
+                <h1>
+                    <span>Hey, I'm Slavin</span>
+                    <span>I live around Europe</span>
+                    <span>I am a digital engineer</span>
+                    <span>
+                        <span>I love&nbsp;
+                        <span is = "typewritter">
+                            <span>Motion Graphics</span>
+                            <span>Material Design</span>
+                            <span>Functional Programming</span>
+                            <span>Parallel Computing</span>
+                        </span>
+                    </span>
+                </h1>
+            </section>
 
-                        <div class = "metadata">
+            <section id = "gallery" :class="{ 'active': path == '/articles', 'inactive': path != '/articles', 'hparallax': true}">
 
-                            <div class = "tags" v-show = "path == '/articles' && pageLoaded" transition = "after-hparallax">
-                                {s% for tag in item.tags %s}
-                                    <span>{s{ tag }s}</span>
-                                {s% endfor %s}
+                <article v-for="item in items" class = "thumbnail">
+                    <a :href = "item.link">
+                        <header id = "main-header">
+
+                            <div class = "cover" :style="'background-image: url(' + item.thumbnail + ')'">
                             </div>
 
-                            <h2 v-decomposed = "{baseDelay: 1.2, ordered: false}" v-show = "path == '/articles' && pageLoaded" transition = "after-hparallax">
-                                {s{ item.title }s}
-                            </h2>
+                            <div class = "metadata">
 
-                            <div class = "line"></div>
+                                <div class = "tags">
+                                    <span v-for="tag in item.tags">{{tag}}</span>
+                                </div>
 
-                            <time v-decomposed = "{baseDelay: 0, ordered: false}">{s{ item.date }s}</time>
-                        </div>
-                    </header>
-                </a>
-            </article>
-            {s% endfor %s}
+                                <h2 v-decomposed = "{baseDelay: 1.2, ordered: false}">
+                                    {{ item.title }}
+                                </h2>
 
-        </section>
-        {s% endblock %s}
+                                <div class = "line"></div>
 
+                                <time v-decomposed = "{baseDelay: 0, ordered: false}">{{ item.date }}</time>
+                            </div>
+                        </header>
+                    </a>
+                </article>
+            </section>
+
+        </div>
     </body>
 
     <!-- GUI Framework -->
-    <script src = "http://cdn.jsdelivr.net/vue/1.0.17/vue.min.js"></script>
-
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src = "/application.js"></script>
 
     <script>

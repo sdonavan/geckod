@@ -470,6 +470,8 @@ article header .tags span
 article header h2
 {
     font-size: 1.6rem;
+    white-space: pre-wrap;
+    line-height: 1.3rem;
 }
 
 /* ---------- Tieme ----------- */
@@ -544,7 +546,8 @@ html
 
 /* ================= Transitions ================== */
 /************ Parallax transition ************/
-.hparallax-transition
+.hparallax,
+.hparallax *
 {
     transform: translateX(0);
     transition: all 1.2s cubic-bezier(0.45, 0.01, 0, 1) 0s;
@@ -552,25 +555,54 @@ html
     overflow: hidden;
 }
 
-#gallery.hparallax-enter,
-#gallery.hparallax-leave
+#gallery.hparallax
 {
-  transform: translateX(100%);
-  height: 100vh;
+    transform: translateX(100%);
 }
 
-#home.hparallax-enter,
-#home.hparallax-leave
+#gallery.hparallax.inactive
 {
-  transform: translateX(-100%);
+    height: 100vh;
 }
 
-video.hparallax-leave,
-video.hparallax-enter
+#home.hparallax
 {
-    transform: translate(-30%);
+    transform: translateX(-100%);
 }
 
+#background.hparallax
+{
+    transform: translateX(-10%);
+}
+
+#gallery.hparallax.active,
+#home.hparallax.active,
+#background.hparallax.active
+{
+    transform: translateX(0);
+}
+
+#gallery h2 > *
+{
+    transition: all 1.2s cubic-bezier(0.45, 0.01, 0, 1) 0s;
+    display: inline-block;
+    transform: rotateX(180deg);
+    opacity: 0;
+}
+
+#gallery.hparallax .tags
+{
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+#gallery.hparallax.active h2 > *,
+#gallery.hparallax.active .tags
+{
+    transition-delay: 1.2s;
+    transform: rotateX(0deg) translateY(0);
+    opacity: 1;
+}
 
 /************ Gallery transitions ************/
 .after-hparallax-transition

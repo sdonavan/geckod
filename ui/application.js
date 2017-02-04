@@ -1,19 +1,59 @@
+var ITEMS =
+[
+    {
+        _id: 'hurm-photos',
+        title: 'Hurm Photos: a photographers portfolio',
+        date: new Date('08/12/2015'),
+        tags: ['Website', 'Design', 'HTML5'],
+        thumbnail: '/media/thumbnails/hurm.jpg',
+        link: 'http://www.hurmphotos.com'
+    },
+
+    {
+
+        _id: 'europe-for-investors',
+        title: 'Europe for investors',
+        date: new Date('01/01/2016'),
+        tags: ['Experiment', 'D3.js'],
+        thumbnail: '/media/thumbnails/eufi.jpg',
+        link: 'https://sdonavan.github.io/europe-for-investors/#valuations:gdp_ppp_per_capita'
+    },
+
+    {
+        _id: 'the-center',
+        title: 'The center: website',
+        date: new Date('08/12/2013'),
+        tags: ['Website', 'Design', 'Flash'],
+        link: 'http://thecenterbg.com/',
+        thumbnail: '/media/thumbnails/center.jpg'
+    },
+
+    {
+        _id: 'memories',
+        title: 'Memories',
+        date: new Date('04/06/2014'),
+        tags: ['Experiment', 'WebGL'],
+        thumbnail: 'http://p1.pichost.me/i/33/1564937.jpg',
+        link: 'https://sdonavan.github.io/memories/'
+    }
+]
+
 Vue.component('typewritter',
 {
     template: '<span class = "typewritter"><slot></slot></span>',
 
     props: {speed: {type: Number, default: 30}, pauseInterval: {type: Number, default: 1500}},
 
-    activate: function(done)
+    mounted: function(done)
     {
         this.keywords =
-            Array.prototype.slice.call(this.$el.children) // Convert to Array
+            Array.prototype
+            .slice.call(this.$el.children) // Convert to Array
             .map(e => e.innerHTML) // Get HTML
 
 
         this.refresh()
         this.run()
-        done()
     },
 
     methods:
@@ -82,11 +122,11 @@ Vue.component('typewritter',
 
 Vue.directive('decomposed',
 {
-    update: function(values)
+    bind: function(element, params)
     {
-        var element = this.el
         var text = element.textContent.trim()
         var letters = text.split('')
+        var values = params.value
 
         element.innerHTML = ''
         letters.map((letter, index) =>
@@ -104,16 +144,18 @@ Vue.directive('decomposed',
 
 Vue.directive('internal',
 {
-    update: function(value)
+    bind: function(element, params)
     {
-        this.el.addEventListener('click', e =>
+        var value = params.value
+
+        element.addEventListener('click', e =>
         {
             // If the link is iternal, block it
             // and do history API magic
             e.preventDefault()
 
             // Get human friendly link if it's there
-            var refference = this.el.getAttribute('href')
+            var refference = element.getAttribute('href')
 
             // If already on this page, scip
             if (window.location.pathname === refference)
@@ -121,19 +163,8 @@ Vue.directive('internal',
 
             history.pushState('', '', refference)
 
-            this.set(refference)
-            value = refference
+            element.dispatchEvent(new CustomEvent('routed', {bubbles: true, detail: refference}))
         })
-    },
-
-    twoWay: true
-})
-
-
-Vue.directive('ddawwd',
-{
-    update: function(value)
-    {
     },
 
     twoWay: true
@@ -141,12 +172,13 @@ Vue.directive('ddawwd',
 
 var Application = new Vue(
 {
-    el: 'body',
+    el: '#content',
 
     data:
     {
         'path': window.location.pathname,
-        'pageLoaded': false
+        'pageLoaded': false,
+        'items': ITEMS.map(i => {i.date = moment(i.date).format('MMMM Do YYYY'); return i}),
     },
 
     computed:
@@ -158,7 +190,8 @@ var Application = new Vue(
 
     created: function()
     {
-        window.onpopstate = e => {console.log("Cccc"); this.path = window.location.pathname;}
+        window.onpopstate = e => {this.path = window.location.pathname;}
         window.onload = e => this.pageLoaded = true
+        window.addEventListener('routed', e => this.path = e.detail)
     }
 })
